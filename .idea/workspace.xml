@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2b389bb2-6dcb-477f-8f85-e7677b832f82" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/pcloud-common/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-gateway/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-auth/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-dependencies/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-admin/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-admin/pcloud-admin-client/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-user/pcloud-user-client/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-user/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-user/pcloud-user-api/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-log/pcloud-log-api/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-log/target/" />
+    <ignored path="$PROJECT_DIR$/ploud-oss/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-job-admin/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DevPartner.ProjectWorkspace">
+    <option name="runtimeAnalysisType" value="-1" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="pcloud" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>系统角色</find>
+      <find>Grade</find>
+      <find>grade</find>
+      <find>shar</find>
+      <find>sentinel</find>
+      <find>mon</find>
+      <find>IConsts.ZERO == LConsts.ZERO.compareTo(menuDO.getParentId())</find>
+      <find>Objects.is</find>
+      <find>uri</find>
+      <find>MONGODB_PREFIX</find>
+      <find>tokenService</find>
+      <find>tokenServices(</find>
+      <find>tokenConverter</find>
+      <find>tokenId</find>
+      <find>UserAgentUtil</find>
+      <find>check</find>
+      <find>gmtCreatedDate</find>
+      <find>pcloud</find>
+      <find>havingValue</find>
+      <find>expiration</find>
+      <find>defaultTokenServices</find>
+      <find>职级</find>
+      <find>convert</find>
+      <find>resourceId</find>
+      <find>public</find>
+      <find>model.addAttribute(</find>
+      <find>LoginService</find>
+      <find>triggerStatus</find>
+      <find>getJobsByGroup</find>
+      <find>collection</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Request</replace>
+      <replace>MenuDTO</replace>
+      <replace>toSuccess</replace>
+      <replace>resource</replace>
+      <replace>ResourceDTO</replace>
+      <replace>resourceService</replace>
+      <replace>资源</replace>
+      <replace>GradeDTO</replace>
+      <replace>grade</replace>
+      <replace>职级</replace>
+      <replace>Dept</replace>
+      <replace>Post</replace>
+      <replace>岗位</replace>
+      <replace>部门</replace>
+      <replace>data.put(</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/pcloud-admin/pcloud-admin-api</dir>
+      <dir>$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobRegistryMonitorHelper.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobScheduleHelper.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/core/thread/JobTriggerPoolHelper.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/core/util/LocalCacheUtil.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobLogGlueDao.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobLogReportDao.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobRegistryDao.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobUserDao.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/resources/mybatis-mapper/XxlJobLogMapper.xml" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteBusyover.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteConsistentHash.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteFirst.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteLast.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/core/route/strategy/ExecutorRouteRandom.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/resources/application-test.yml" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/service/impl/AdminBizImpl.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/resp/ResponseResult.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/controller/JobCodeController.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/resources/bootstrap-dev.yml" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/service/LoginService.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/controller/JobApiController.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/common/JobInfoParams.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/resources/mybatis-mapper/XxlJobInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobInfoDao.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobLogDao.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/common/JobGroupParams.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/dao/XxlJobGroupDao.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/controller/JobGroupController.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/common/JobLogParams.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/controller/JobLogController.java" />
+        <option value="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/request/ResourceSaveRequest.java" />
+        <option value="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/service/impl/ResourceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/common/TriggerJobParam.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/controller/JobInfoController.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/service/impl/XxlJobServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/pom.xml" />
+        <option value="$PROJECT_DIR$/pcloud-auth/src/main/java/quick/pager/pcloud/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/dto/SysUserDTO.java" />
+        <option value="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/controller/SysUserController.java" />
+        <option value="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/service/SysUserService.java" />
+        <option value="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/service/impl/SysUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/utils/WebUtils.java" />
+        <option value="$PROJECT_DIR$/pcloud-common/pom.xml" />
+        <option value="$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/component/AuthorizationManager.java" />
+        <option value="$PROJECT_DIR$/pcloud-dependencies/pom.xml" />
+        <option value="$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/filter/AuthGlobalFilter.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="pcloud" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="pcloud" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="69" />
+    <option name="width" value="1652" />
+    <option name="height" value="920" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pcloud-job-admin/src/main/resources" />
+      <recent name="$PROJECT_DIR$/pcloud-job-admin/src/main" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/filter" />
+      <recent name="$PROJECT_DIR$/pcloud-auth/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xxl.job.admin.resp" />
+      <recent name="quick.pager.pcloud.dto" />
+      <recent name="quick.pager.pcloud.config" />
+      <recent name="quick.pager.pcloud.request" />
+      <recent name="quick.pager.pcloud.service.impl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pcloud-job-admin" />
+      <recent name="$PROJECT_DIR$/pcloud-auth/src/main/resources" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 77 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 77 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="pcloud-admin-api" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.26569343" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.Admin">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Admin" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pcloud-admin-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="quick.pager.pcloud.Admin" />
+      <RunnerSettings RunnerId="Debug with VisualVM">
+        <option name="visualVMId" value="51504212407035" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Auth" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pcloud-auth" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="quick.pager.pcloud.Auth" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pcloud-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="quick.pager.pcloud.Gateway" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Log" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pcloud-log-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="quick.pager.pcloud.Log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OSS" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ploud-oss" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="quick.pager.pcloud.OSS" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OSS" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ploud-oss" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="quick.pager.ploud.OSS" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XxlJobAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pcloud-job-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxl.job.admin.XxlJobAdminApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.Admin" />
+      <item itemvalue="Spring Boot.XxlJobAdminApplication" />
+      <item itemvalue="Spring Boot.Auth" />
+      <item itemvalue="Spring Boot.Gateway" />
+      <item itemvalue="Spring Boot.Log" />
+      <item itemvalue="Spring Boot.OSS" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b389bb2-6dcb-477f-8f85-e7677b832f82" name="Default Changelist" comment="" />
+      <created>1608272761536</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608272761536</updated>
+      <workItem from="1608272762758" duration="1342000" />
+      <workItem from="1608276187962" duration="112000" />
+      <workItem from="1608276409155" duration="9845000" />
+      <workItem from="1608354497162" duration="6003000" />
+      <workItem from="1608376565949" duration="13611000" />
+      <workItem from="1608426510570" duration="1577000" />
+      <workItem from="1608433262054" duration="8540000" />
+      <workItem from="1608463080265" duration="1445000" />
+      <workItem from="1608467134182" duration="414000" />
+      <workItem from="1608469238463" duration="643000" />
+      <workItem from="1609071994193" duration="3659000" />
+      <workItem from="1609499457890" duration="164000" />
+      <workItem from="1609550873293" duration="5676000" />
+      <workItem from="1609642944453" duration="10578000" />
+      <workItem from="1609765369270" duration="1589000" />
+      <workItem from="1609852540627" duration="2904000" />
+      <workItem from="1609885755869" duration="42113000" />
+      <workItem from="1610460836880" duration="23784000" />
+      <workItem from="1610765463440" duration="4278000" />
+      <workItem from="1610770260894" duration="9038000" />
+      <workItem from="1610782697766" duration="61915000" />
+      <workItem from="1611669218083" duration="99000" />
+      <workItem from="1611669341726" duration="232000" />
+      <workItem from="1611669576888" duration="13178000" />
+      <workItem from="1612598401126" duration="2423000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="225162000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1680" height="954" extended-state="6" />
+    <layout>
+      <window_info id="Web" order="0" side_tool="true" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Favorites" order="2" sideWeight="0.5049702" side_tool="true" weight="0.2753358" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49372384" visible="true" weight="0.23748474" />
+      <window_info id="Structure" order="4" sideWeight="0.50627613" side_tool="true" weight="0.27045178" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50061053" side_tool="true" weight="0.41939253" />
+      <window_info anchor="bottom" id="Java Enterprise" order="5" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="6" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32943925" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.35614526" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.3995327" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="bottom" id="Spring" order="14" />
+      <window_info anchor="bottom" id="Sequence" order="15" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="16" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="17" />
+      <window_info anchor="bottom" id="Run Dashboard" order="18" sideWeight="0.4993895" weight="0.48044693" />
+      <window_info anchor="bottom" id="Messages" order="19" weight="0.32122904" />
+      <window_info anchor="bottom" id="Database Console" order="20" weight="0.32983682" />
+      <window_info anchor="bottom" id="Tail" order="21" />
+      <window_info anchor="right" id="Database" order="0" weight="0.32967034" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="right" id="Maven" order="2" weight="0.38125893" />
+      <window_info anchor="right" id="Commander" order="3" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="Bean Validation" order="6" weight="0.32967034" />
+      <window_info anchor="right" id="RestServices" order="7" weight="0.32967034" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Web" order="0" side_tool="true" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Favorites" order="2" sideWeight="0.5006418" side_tool="true" weight="0.26675788" />
+      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49935815" visible="true" weight="0.2753358" />
+      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="5" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="6" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.49182242" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.3995327" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="bottom" id="Spring" order="14" />
+      <window_info anchor="bottom" id="Sequence" order="15" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="16" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="17" />
+      <window_info anchor="bottom" id="Run Dashboard" order="18" weight="0.36799064" />
+      <window_info anchor="bottom" id="Messages" order="19" weight="0.3259346" />
+      <window_info anchor="bottom" id="Database Console" order="20" weight="0.32983682" />
+      <window_info anchor="right" id="Database" order="0" weight="0.32967034" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="right" id="Maven" order="2" visible="true" weight="0.22832723" />
+      <window_info anchor="right" id="Commander" order="3" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="Bean Validation" order="6" weight="0.32967034" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>redisTemplate.opsForValue().get(&quot;pcloud:token:&quot;.concat(phone))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>exchange.getRequest().getQueryParams()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>exchange.getRequest().getBody()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>endpoints.getClientDetailsService()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getHeaderNames()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>authentication.getPrincipal()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>authentication.</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>authentication</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>v</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pcloud-common/src/main/java/quick/pager/pcloud/request/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/request/ResourceSaveRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/enums/ResourceBizTypeEnums.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/service/impl/ResourceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/common/TriggerJobParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/controller/JobInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="78" lean-forward="true" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2561#2562#0" expanded="true" />
+            <element signature="e#2610#2611#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-job-admin/src/main/java/com/xxl/job/admin/service/impl/XxlJobServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="367" column="35" selection-start-line="367" selection-start-column="20" selection-end-line="367" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-auth/src/main/java/quick/pager/pcloud/configuration/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-auth/src/main/java/quick/pager/pcloud/configuration/OAuth2SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-401">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/nimbusds/nimbus-jose-jwt/7.8.1/nimbus-jose-jwt-7.8.1-sources.jar!/com/nimbusds/jose/JWSObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/dto/SysUserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-auth/src/main/java/quick/pager/pcloud/configuration/JwtTokenConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-auth/src/main/java/quick/pager/pcloud/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/request/SysUserPageRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/service/SysUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/service/impl/SysUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="198" column="75" selection-start-line="198" selection-start-column="8" selection-end-line="198" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/filter/IgnoreUrlsRemoveJwtFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.8.RELEASE/spring-web-5.2.8.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="175" column="4" selection-start-line="175" selection-start-column="4" selection-end-line="175" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/filter/LogResponseGlobalFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.8.RELEASE/spring-web-5.2.8.RELEASE-sources.jar!/org/springframework/http/HttpHeaders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="205" column="31" selection-start-line="205" selection-start-column="31" selection-end-line="205" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.8.RELEASE/spring-web-5.2.8.RELEASE-sources.jar!/org/springframework/http/MediaType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="107" column="53" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/utils/WebUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="90" column="92" selection-start-line="90" selection-start-column="92" selection-end-line="90" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-collections4/4.2/commons-collections4-4.2-sources.jar!/org/apache/commons/collections4/CollectionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4781">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-collections4/4.2/commons-collections4-4.2-sources.jar!/org/apache/commons/collections4/MapUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7342">
+          <caret line="58" column="2" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+          <folding>
+            <element signature="e#3111#3143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2-sources.jar!/org/apache/commons/collections/CollectionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="977" column="26" selection-start-line="977" selection-start-column="26" selection-end-line="977" selection-end-column="26" />
+          <folding>
+            <element signature="e#39321#39322#0" expanded="true" />
+            <element signature="e#39376#39377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2-sources.jar!/org/apache/commons/collections/MapUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="89" column="21" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-dependencies/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/filter/AuthGlobalFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/service/impl/MenuServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="85" column="58" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/controller/SysUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="68" column="52" lean-forward="true" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-common/src/main/java/quick/pager/pcloud/utils/WebUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/src/main/java/quick/pager/pcloud/service/MenuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-admin-api.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hs_err_pid99842.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xxl-job-admin.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ploud-oss/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="67" column="36" selection-start-line="66" selection-end-line="69" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/component/AccessDeniedHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/component/AuthenticationEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/component/AuthorizationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/config/LogMQ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/cn/hutool/hutool-all/5.3.5/hutool-all-5.3.5-sources.jar!/cn/hutool/core/net/NetUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11094">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/config/PCloudGatewayConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/config/PCloudProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/config/ResourceServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcloud-gateway/src/main/java/quick/pager/pcloud/filter/LogRequestGlobalFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>pcloud</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: cglib:cglib:3.2.10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
