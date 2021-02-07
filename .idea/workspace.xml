@@ -2,197 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f060b04-25ad-4487-93f4-dd62056ed322" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/bootstrap-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/controller/DeptController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/controller/GradeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/controller/MenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/controller/PermissionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/controller/PostController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/controller/ResourceController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/controller/RoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/controller/SysUserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/DeptDTO$DeptDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/DeptDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/GradeDTO$GradeDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/GradeDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/MenuDTO$MenuDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/MenuDTO$Meta.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/MenuDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/PermissionDTO$PermissionDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/PermissionDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/PostDTO$PostDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/PostDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/ResourceDTO$ResourceDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/ResourceDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/ResourceTreeDTO$ResourceTreeDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/ResourceTreeDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/RoleDTO$RoleDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/RoleDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/SysUserDTO$SysUserDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/SysUserDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/dto/SysUserDownloadDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/enums/ResourceBizTypeEnums.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/helper/MenuHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/DeptMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/GradeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/MenuMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/PostMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/ResourceMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/RoleMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/RoleMenuMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/RoleResourceMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/SysRoleMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/SysUserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/mapper/SysUserProfileMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/DeptDO$DeptDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/DeptDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/GradeDO$GradeDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/GradeDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/MenuDO$MenuDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/MenuDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/PostDO$PostDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/PostDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/ResourceDO$ResourceDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/ResourceDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/RoleDO$RoleDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/RoleDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/RoleMenuDO$RoleMenuDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/RoleMenuDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/RoleResourceDO$RoleResourceDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/RoleResourceDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/SysRoleDO$SysRoleDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/SysRoleDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/SysUserDO$SysUserDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/SysUserDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/SysUserProfileDO$SysUserProfileDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/model/SysUserProfileDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/AuthorizationRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/DeptOtherRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/DeptPageRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/DeptSaveRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/GradeOtherRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/GradePageRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/GradeSaveRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/MenuOtherRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/MenuSaveRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/PostOtherRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/PostPageRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/PostSaveRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/ResourceOtherRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/ResourcePageRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/ResourceSaveRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/RoleOtherRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/RolePageRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/RoleSaveRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/SysUserDownloadRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/SysUserOtherRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/SysUserPageRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/SysUserSaveRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/request/SystemConfigRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/DeptService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/GradeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/MenuService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/PermissionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/PostService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/ResourceService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/RoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/SysUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/impl/DeptServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/impl/GradeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/impl/MenuServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/impl/PermissionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/impl/PostServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/impl/ResourceServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/impl/RoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-api/target/classes/quick/pager/pcloud/service/impl/SysUserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-client/target/classes/quick/pager/pcloud/admin/client/AdminAuthClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-client/target/classes/quick/pager/pcloud/admin/dto/UserDTO$UserDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-client/target/classes/quick/pager/pcloud/admin/dto/UserDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-admin/pcloud-admin-client/target/classes/quick/pager/pcloud/admin/fallback/AdminAuthClientFallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/bootstrap-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/pcloud.jks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/Auth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/configuration/JwtTokenConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/configuration/OAuth2SecurityConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/configuration/SecurityConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/controller/AuthController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/controller/KeyPairController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/dto/OAuthTokenDTO$OAuthTokenDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/dto/OAuthTokenDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/dto/OAuthUserDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/exception/PCloudAdvice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-auth/target/classes/quick/pager/pcloud/service/OAuthUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/META-INF/spring.factories" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/configuration/ObjectMapperConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/configuration/PCloudConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/configuration/PaginationInterceptorConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/configuration/RedisConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/constants/IConsts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/constants/LConsts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/constants/RedisKeys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/constants/ResponseStatus$Code.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/constants/ResponseStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/constants/SConsts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/context/PCloudContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/dto/BasicDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/enums/IEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/enums/SortEnums.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/excel/LocalDateTimeConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/exception/PCloudException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/exception/PCloudExceptionAdvice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/model/ImageModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/model/LoginUser$LoginUserBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/model/LoginUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/model/ModelDO$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/model/ModelDO$ModelDOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/model/ModelDO$ModelDOBuilderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/model/ModelDO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/model/response/CommonResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/model/response/ResponseResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/model/response/TreeResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/request/PageRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/request/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/utils/Assert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/utils/DateUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/utils/FileUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/utils/LatitudeLongitudeUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/utils/PermissionMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-common/target/classes/quick/pager/pcloud/utils/WebUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/bootstrap-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/Gateway.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/component/AccessDeniedHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/component/AuthenticationEntryPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/component/AuthorizationManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/config/LogMQ.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/config/PCloudGatewayConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/config/PCloudProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/config/ResourceServerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/filter/AuthGlobalFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/filter/IgnoreUrlsRemoveJwtFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/filter/LogRequestGlobalFilter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/filter/LogRequestGlobalFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/filter/LogResponseGlobalFilter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/filter/LogResponseGlobalFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-gateway/target/classes/quick/pager/pcloud/utils/WebUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/classes/quick/pager/pcloud/log/client/LogClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/classes/quick/pager/pcloud/log/dto/LogDTO$LogDTOBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/classes/quick/pager/pcloud/log/dto/LogDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/classes/quick/pager/pcloud/log/fallback/LogFallback$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/classes/quick/pager/pcloud/log/fallback/LogFallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/classes/quick/pager/pcloud/log/request/LogPageRequest$LogPageRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/classes/quick/pager/pcloud/log/request/LogPageRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/classes/quick/pager/pcloud/log/request/LogSaveRequest$LogSaveRequestBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/classes/quick/pager/pcloud/log/request/LogSaveRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/java/quick/pager/pcloud/OSS.java" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/java/quick/pager/pcloud/OSS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/java/quick/pager/pcloud/configuration/OSSContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/java/quick/pager/pcloud/configuration/OSSContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/java/quick/pager/pcloud/configuration/QiniuAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/java/quick/pager/pcloud/configuration/QiniuAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/java/quick/pager/pcloud/controller/OSSController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/java/quick/pager/pcloud/controller/OSSController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/java/quick/pager/pcloud/enmus/OSSTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/java/quick/pager/pcloud/enmus/OSSTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/java/quick/pager/pcloud/properties/QiniuProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/java/quick/pager/pcloud/properties/QiniuProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/java/quick/pager/pcloud/service/OSSService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/java/quick/pager/pcloud/service/OSSService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/java/quick/pager/pcloud/service/impl/AliyunServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/java/quick/pager/pcloud/service/impl/AliyunServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/java/quick/pager/pcloud/service/impl/QiniuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/java/quick/pager/pcloud/service/impl/QiniuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/resources/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/resources/META-INF/spring.factories" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/resources/bootstrap-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/resources/bootstrap-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ploud-oss/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pcloud-oss/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/pcloud-log/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -207,6 +34,7 @@
     <ignored path="$PROJECT_DIR$/ploud-oss/target/" />
     <ignored path="$PROJECT_DIR$/pcloud-log/pcloud-log-client/target/" />
     <ignored path="$PROJECT_DIR$/pcloud-common/target/" />
+    <ignored path="$PROJECT_DIR$/pcloud-oss/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,8 +44,50 @@
   <component name="DevPartner.ProjectWorkspace">
     <option name="runtimeAnalysisType" value="-1" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pcloud-oss/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="49" column="59" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -374,25 +244,22 @@
       <option name="presentableId" value="Default" />
       <updated>1612699346304</updated>
       <workItem from="1612699347658" duration="43000" />
+      <workItem from="1612699876488" duration="157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43000" />
+    <option name="totallyTimeSpent" value="200000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1680" height="954" extended-state="6" />
+    <frame x="0" y="25" width="1680" height="954" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
       <window_info id="Designer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.25274727" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Sequence" />
-      <window_info anchor="bottom" id="Run with VisualVM" />
-      <window_info anchor="bottom" id="Debug with VisualVM" />
-      <window_info anchor="bottom" id="Run Dashboard" weight="0.32943925" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
@@ -407,18 +274,42 @@
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" />
-      <window_info anchor="right" id="RestServices" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Spring" order="14" />
+      <window_info anchor="bottom" id="Sequence" order="15" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="16" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="17" />
+      <window_info anchor="bottom" id="Run Dashboard" order="18" weight="0.32943925" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="right" id="Maven" order="2" visible="true" weight="0.24908425" />
       <window_info anchor="right" id="Commander" order="3" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+      <window_info anchor="right" id="RestServices" order="6" />
+      <window_info anchor="right" id="Bean Validation" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pcloud-oss/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="49" column="59" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

@@ -14,7 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/pcloud-log/pcloud-log.iml" filepath="$PROJECT_DIR$/pcloud-log/pcloud-log.iml" />
       <module fileurl="file://$PROJECT_DIR$/pcloud-log/pcloud-log-api/pcloud-log-api.iml" filepath="$PROJECT_DIR$/pcloud-log/pcloud-log-api/pcloud-log-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/pcloud-log/pcloud-log-client/pcloud-log-client.iml" filepath="$PROJECT_DIR$/pcloud-log/pcloud-log-client/pcloud-log-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ploud-oss/pcloud-oss.iml" filepath="$PROJECT_DIR$/ploud-oss/pcloud-oss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pcloud-oss/pcloud-oss.iml" filepath="$PROJECT_DIR$/pcloud-oss/pcloud-oss.iml" />
     </modules>
   </component>
 </project>
