@@ -1,4 +1,0 @@
-# Auto Configure
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-quick.pager.pcloud.configuration.ObjectMapperConfiguration,\
-quick.pager.pcloud.configuration.PaginationInterceptorConfiguration
