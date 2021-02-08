@@ -58,7 +58,7 @@ public class PostServiceImpl implements PostService {
     private PostDTO convert(final PostDO postDO) {
         PostDTO postDTO = PostDTO.builder()
                 .id(postDO.getId())
-                .parentId(Objects.nonNull(postDO.getParentId()) ? postDO.getParentId() : LConsts.ZERO)
+                .parentId(Objects.nonNull(postDO.getParentId()) ? postDO.getParentId() : null)
                 .label(postDO.getName())
                 .name(postDO.getName())
                 .gmtModifiedName(postDO.getGmtModifiedName())
