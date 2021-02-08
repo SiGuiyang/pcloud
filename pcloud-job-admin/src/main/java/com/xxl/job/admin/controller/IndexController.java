@@ -2,6 +2,9 @@ package com.xxl.job.admin.controller;
 
 import com.xxl.job.admin.service.XxlJobService;
 import com.xxl.job.core.biz.model.ReturnT;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.temporal.TemporalAdjusters;
 import java.util.HashMap;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.web.bind.WebDataBinder;
@@ -38,8 +41,10 @@ public class IndexController {
 
     @RequestMapping("/chartInfo")
     @ResponseBody
-    public ReturnT<Map<String, Object>> chartInfo(Date startDate, Date endDate) {
-        return xxlJobService.chartInfo(startDate, endDate);
+    public ReturnT<Map<String, Object>> chartInfo() {
+        LocalDateTime startTime = LocalDateTime.now().with(TemporalAdjusters.firstDayOfMonth()).withHour(0).withMinute(0).withSecond(0).withNano(0);
+        LocalDateTime endTime = LocalDateTime.now().with(TemporalAdjusters.lastDayOfMonth()).withHour(23).withMinute(59).withSecond(59);
+        return xxlJobService.chartInfo(Date.from(startTime.atZone(ZoneId.systemDefault()).toInstant()), Date.from(endTime.atZone(ZoneId.systemDefault()).toInstant()));
     }
 
     @InitBinder

@@ -42,6 +42,7 @@
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <aliyun.version>1.0.0</aliyun.version>
         <shardingsphere.version>4.1.0</shardingsphere.version>
+        <xxl.version>2.2.0</xxl.version>
     </properties>
 
     <dependencyManagement>
@@ -254,6 +255,13 @@
                 <groupId>commons-beanutils</groupId>
                 <artifactId>commons-beanutils</artifactId>
                 <version>${commons-beanutils.version}</version>
+            </dependency>
+
+            <!-- xxl-job-core -->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl.version}</version>
             </dependency>
 
         </dependencies>
