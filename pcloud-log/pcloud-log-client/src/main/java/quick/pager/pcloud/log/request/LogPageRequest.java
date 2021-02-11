@@ -1,5 +1,6 @@
 package quick.pager.pcloud.log.request;
 
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,4 +26,8 @@ public class LogPageRequest extends PageRequest {
      * 访问人
      */
     private String name;
+    /**
+     * 访问时间
+     */
+    private LocalDate visitDate;
 }

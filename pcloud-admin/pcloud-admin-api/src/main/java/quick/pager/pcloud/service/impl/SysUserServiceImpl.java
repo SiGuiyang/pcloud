@@ -271,6 +271,7 @@ public class SysUserServiceImpl implements SysUserService {
         return ResponseResult.toSuccess(SysUserDTO.builder()
                 .phone(sysUser.getPhone())
                 .name(sysUser.getName())
+                .avatar(sysUser.getAvatar())
                 .routers(topMenu)
                 .permissions(permissions)
                 .build());

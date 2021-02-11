@@ -1,6 +1,7 @@
 package quick.pager.pcloud.service.impl;
 
 import java.lang.reflect.Field;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -15,7 +16,6 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.aggregation.AggregationResults;
-import org.springframework.data.mongodb.core.aggregation.GroupOperation;
 import org.springframework.data.mongodb.core.index.Index;
 import org.springframework.data.mongodb.core.index.IndexOperations;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -99,8 +99,8 @@ public class LogServiceImpl implements LogService {
     public ResponseResult<List<LogDTO>> queryPage(final LogPageRequest request) {
 
         // 得到表名
-        String collectionName = Optional.ofNullable(request.getGmtCreatedDate())
-                .orElseGet(LocalDateTime::now)
+        String collectionName = Optional.ofNullable(request.getVisitDate())
+                .orElseGet(LocalDate::now)
                 .format(DateTimeFormatter.ofPattern(DateUtils.NORM_DATE_PATTERN, Locale.getDefault()));
 
 
