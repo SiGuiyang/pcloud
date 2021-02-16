@@ -18,6 +18,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import quick.pager.pcloud.constants.IConsts;
 import quick.pager.pcloud.constants.LConsts;
 import quick.pager.pcloud.constants.SConsts;
@@ -202,7 +203,7 @@ public class RoleServiceImpl implements RoleService {
 
         List<RoleDTO> dtos = Collections.emptyList();
         if (count > 0) {
-            List<RoleDO> records = this.roleMapper.selectPage(new Page<>(request.getPage(), request.getPageSize()), wrapper).getRecords();
+            List<RoleDO> records = this.roleMapper.selectPage(new Page<>(request.getPage(), request.getPageSize(), false), wrapper).getRecords();
 
             dtos = records.stream().map(this::convert).collect(Collectors.toList());
         }
@@ -224,6 +225,7 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> create(final RoleSaveRequest request) {
         RoleDO role = this.convert(request);
         Assert.isTrue(this.roleMapper.insert(role) > 0, () -> "创建角色失败");
@@ -231,6 +233,7 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> modify(final RoleSaveRequest request) {
         RoleDO role = this.convert(request);
         Assert.isTrue(this.roleMapper.updateById(role) > 0, () -> "更新角色失败");
@@ -244,6 +247,7 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> delete(final Long id) {
         RoleDO roleDO = this.roleMapper.selectById(id);
         Assert.isTrue(Objects.nonNull(roleDO), () -> "角色不存在");

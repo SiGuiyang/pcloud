@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import quick.pager.pcloud.constants.LConsts;
 import quick.pager.pcloud.dto.PostDTO;
 import quick.pager.pcloud.mapper.PostMapper;
@@ -84,7 +85,7 @@ public class PostServiceImpl implements PostService {
 
         List<PostDTO> dtos = Collections.emptyList();
         if (count > 0) {
-            List<PostDO> records = this.postMapper.selectPage(new Page<>(request.getPage(), request.getPageSize()), wrapper).getRecords();
+            List<PostDO> records = this.postMapper.selectPage(new Page<>(request.getPage(), request.getPageSize(), false), wrapper).getRecords();
 
             dtos = records.stream().map(this::convert).collect(Collectors.toList());
         }
@@ -117,6 +118,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> create(final PostSaveRequest request) {
         PostDO PostDO = this.convert(request);
         Assert.isTrue(this.postMapper.insert(PostDO) > 0, () -> "创建职级失败");
@@ -124,6 +126,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> modify(final PostSaveRequest request) {
         PostDO PostDO = this.convert(request);
         Assert.isTrue(this.postMapper.updateById(PostDO) > 0, () -> "更新职级失败");
@@ -131,6 +134,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> delete(final Long id) {
         Assert.isTrue(this.postMapper.deleteById(id) > 0, () -> "删除职级失败");
         return ResponseResult.toSuccess(id);

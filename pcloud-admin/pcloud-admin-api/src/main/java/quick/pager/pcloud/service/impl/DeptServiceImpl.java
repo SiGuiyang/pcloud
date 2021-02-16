@@ -13,6 +13,7 @@ import javax.annotation.Resource;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import quick.pager.pcloud.constants.IConsts;
 import quick.pager.pcloud.constants.LConsts;
 import quick.pager.pcloud.dto.DeptDTO;
@@ -107,7 +108,7 @@ public class DeptServiceImpl implements DeptService {
 
         List<DeptDTO> dtos = Collections.emptyList();
         if (count > 0) {
-            List<DeptDO> records = this.deptMapper.selectPage(new Page<>(request.getPage(), request.getPageSize()), wrapper).getRecords();
+            List<DeptDO> records = this.deptMapper.selectPage(new Page<>(request.getPage(), request.getPageSize(), false), wrapper).getRecords();
 
             dtos = records.stream().map(this::convert).collect(Collectors.toList());
         }
@@ -145,6 +146,7 @@ public class DeptServiceImpl implements DeptService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> create(final DeptSaveRequest request) {
         DeptDO deptDO = this.convert(request);
         deptDO.setEstablishedTime(DateUtils.dateTime());
@@ -153,6 +155,7 @@ public class DeptServiceImpl implements DeptService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> modify(final DeptSaveRequest request) {
         DeptDO deptDO = this.convert(request);
         Assert.isTrue(this.deptMapper.updateById(deptDO) > 0, () -> "更新部门失败");
@@ -160,6 +163,7 @@ public class DeptServiceImpl implements DeptService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> delete(final Long id) {
         Assert.isTrue(this.deptMapper.deleteById(id) > 0, () -> "删除部门失败");
         return ResponseResult.toSuccess(id);

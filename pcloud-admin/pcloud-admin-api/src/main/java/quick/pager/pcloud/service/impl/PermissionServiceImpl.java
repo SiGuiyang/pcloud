@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Resource;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import quick.pager.pcloud.helper.MenuHelper;
 import quick.pager.pcloud.mapper.MenuMapper;
 import quick.pager.pcloud.mapper.ResourceMapper;
@@ -46,6 +47,7 @@ public class PermissionServiceImpl implements PermissionService {
     private RoleResourceMapper roleResourceMapper;
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult grant(final AuthorizationRequest request) {
         // 角色
         final Long roleId = request.getRoleId();

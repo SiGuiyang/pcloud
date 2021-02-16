@@ -103,7 +103,7 @@ public class ResourceServiceImpl implements ResourceService {
 
         List<ResourceDTO> dtos = Collections.emptyList();
         if (count > 0) {
-            List<ResourceDO> records = this.resourceMapper.selectPage(new Page<>(request.getPage(), request.getPageSize()), wrapper).getRecords();
+            List<ResourceDO> records = this.resourceMapper.selectPage(new Page<>(request.getPage(), request.getPageSize(), false), wrapper).getRecords();
 
             dtos = records.stream()
                     .map(item -> this.convert(item, true))

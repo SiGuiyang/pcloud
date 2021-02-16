@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.google.common.collect.Lists;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Component;
@@ -79,23 +78,6 @@ public class MenuHelper {
         return selectMenuByRoleIds(roleIds);
     }
 
-
-    /**
-     * 根据当前用户查询权限菜单
-     *
-     * @param sysUserId 用户主键
-     * @return 菜单集
-     */
-    public List<Long> queryPermissionBySysUserId(final Long sysUserId) {
-        List<Long> roleIds = this.querySysRole(sysUserId);
-
-        if (CollectionUtils.isEmpty(roleIds)) {
-            return Collections.emptyList();
-        }
-
-        return queryPermissionByRoleIds(roleIds);
-    }
-
     /**
      * 根据当前用户查询权限菜单
      *
@@ -113,24 +95,6 @@ public class MenuHelper {
 
         return roleDOS.stream().map(RoleDO::getRoleCode).collect(Collectors.toList());
     }
-
-    /**
-     * 通过角色查询当前角色所拥有的权限
-     *
-     * @param roleIds 角色主键集
-     * @return 菜单集
-     */
-    private List<Long> queryPermissionByRoleIds(final List<Long> roleIds) {
-        // 角色所属权限编码
-        List<RoleMenuDO> roleMenus = roleMenuMapper.selectList(new LambdaQueryWrapper<RoleMenuDO>()
-                .in(RoleMenuDO::getRoleId, roleIds));
-
-        return Optional.ofNullable(roleMenus).orElse(Lists.newArrayList()).stream()
-                .map(RoleMenuDO::getMenuId)
-                .distinct()
-                .collect(Collectors.toList());
-    }
-
 
     /**
      * 通过角色查询当前角色所拥有的权限

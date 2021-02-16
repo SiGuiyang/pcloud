@@ -11,6 +11,8 @@
         <module name="pcloud-auth" />
         <module name="pcloud-common" />
         <module name="pcloud-gateway" />
+        <module name="pcloud-integration-api" />
+        <module name="pcloud-integration-client" />
         <module name="pcloud-job-admin" />
         <module name="pcloud-log-api" />
         <module name="pcloud-log-client" />
@@ -26,6 +28,9 @@
       <module name="pcloud-common" target="1.8" />
       <module name="pcloud-dependencies" target="1.5" />
       <module name="pcloud-gateway" target="1.8" />
+      <module name="pcloud-integration" target="1.8" />
+      <module name="pcloud-integration-api" target="1.8" />
+      <module name="pcloud-integration-client" target="1.8" />
       <module name="pcloud-job-admin" target="1.8" />
       <module name="pcloud-log" target="1.8" />
       <module name="pcloud-log-api" target="1.8" />

@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Resource;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import quick.pager.pcloud.constants.IConsts;
 import quick.pager.pcloud.constants.LConsts;
 import quick.pager.pcloud.mapper.MenuMapper;
@@ -90,6 +91,7 @@ public class MenuServiceImpl implements MenuService {
     // endregion
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> create(final MenuSaveRequest request) {
         MenuDO menuDO = this.convert(request);
         Assert.isTrue(this.menuMapper.insert(menuDO) > 0, () -> "创建菜单失败");
@@ -98,6 +100,7 @@ public class MenuServiceImpl implements MenuService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> modify(final MenuSaveRequest request) {
         MenuDO menuDO = this.convert(request);
         this.menuMapper.updateById(menuDO);
@@ -131,6 +134,7 @@ public class MenuServiceImpl implements MenuService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> delete(final Long id) {
         this.menuMapper.deleteById(id);
         return ResponseResult.toSuccess(id);

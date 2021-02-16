@@ -64,6 +64,7 @@
         <module>pcloud-common</module>
         <module>pcloud-dependencies</module>
         <module>pcloud-gateway</module>
+        <module>pcloud-integration</module>
         <module>pcloud-job-admin</module>
         <module>pcloud-log</module>
         <module>pcloud-oss</module>

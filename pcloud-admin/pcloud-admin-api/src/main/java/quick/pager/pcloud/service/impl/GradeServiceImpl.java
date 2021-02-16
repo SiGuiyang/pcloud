@@ -9,6 +9,7 @@ import javax.annotation.Resource;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import quick.pager.pcloud.dto.GradeDTO;
 import quick.pager.pcloud.mapper.GradeMapper;
 import quick.pager.pcloud.model.GradeDO;
@@ -73,7 +74,7 @@ public class GradeServiceImpl implements GradeService {
 
         List<GradeDTO> dtos = Collections.emptyList();
         if (count > 0) {
-            List<GradeDO> records = this.gradeMapper.selectPage(new Page<>(request.getPage(), request.getPageSize()), wrapper).getRecords();
+            List<GradeDO> records = this.gradeMapper.selectPage(new Page<>(request.getPage(), request.getPageSize(), false), wrapper).getRecords();
 
             dtos = records.stream().map(this::convert).collect(Collectors.toList());
         }
@@ -93,6 +94,7 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> create(final GradeSaveRequest request) {
         GradeDO gradeDO = this.convert(request);
         Assert.isTrue(this.gradeMapper.insert(gradeDO) > 0, () -> "创建职级失败");
@@ -100,6 +102,7 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> modify(final GradeSaveRequest request) {
         GradeDO gradeDO = this.convert(request);
         Assert.isTrue(this.gradeMapper.updateById(gradeDO) > 0, () -> "更新职级失败");
@@ -107,6 +110,7 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> delete(final Long id) {
         Assert.isTrue(this.gradeMapper.deleteById(id) > 0, () -> "删除职级失败");
         return ResponseResult.toSuccess(id);

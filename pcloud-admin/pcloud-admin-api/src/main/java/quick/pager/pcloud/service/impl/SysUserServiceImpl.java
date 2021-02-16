@@ -17,6 +17,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import quick.pager.pcloud.constants.IConsts;
 import quick.pager.pcloud.constants.LConsts;
 import quick.pager.pcloud.constants.ResponseStatus;
@@ -225,6 +226,7 @@ public class SysUserServiceImpl implements SysUserService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> create(SysUserSaveRequest request) {
 
         SysUserDO sysUser = this.convert(request);
@@ -237,6 +239,7 @@ public class SysUserServiceImpl implements SysUserService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> modify(SysUserSaveRequest request) {
         SysUserDO sysUser = this.convert(request);
         Assert.isTrue(this.sysUserMapper.updateById(sysUser) > 0, () -> "更新用户失败");

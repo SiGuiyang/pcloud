@@ -8,6 +8,7 @@ import java.util.Objects;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.collections4.CollectionUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -80,7 +81,7 @@ public class SysUserController {
     /**
      * 系统用户强踢下线
      */
-    @PostMapping("/system/user/{id}/offline")
+    @GetMapping("/system/user/{id}/offline")
     public ResponseResult<String> offline(@PathVariable("id") Long id) {
         return sysUserService.offline(id);
     }
