@@ -44,7 +44,7 @@ public class OSSController {
     @PostMapping("/upload")
     public ResponseResult<Map<String, String>> upload(@RequestParam MultipartFile file, @RequestParam(required = false) String ossType) throws IOException {
 
-        OSSTypeEnum ossTypeEnum = OSSTypeEnum.ALIYUN;
+        OSSTypeEnum ossTypeEnum = OSSTypeEnum.TENCENT;
         if (StringUtils.isNotEmpty(ossType)) {
             ossTypeEnum = Enum.valueOf(OSSTypeEnum.class, ossType);
         }

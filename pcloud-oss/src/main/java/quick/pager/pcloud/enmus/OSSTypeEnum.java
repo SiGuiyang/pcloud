@@ -11,6 +11,7 @@ import quick.pager.pcloud.enums.IEnum;
 public enum OSSTypeEnum implements IEnum<String> {
 
     ALIYUN("ALIYUN", "阿里云"),
+    TENCENT("TENCENT", "腾讯云"),
     QINIU("QINIU", "七牛云");
 
     private String code;
