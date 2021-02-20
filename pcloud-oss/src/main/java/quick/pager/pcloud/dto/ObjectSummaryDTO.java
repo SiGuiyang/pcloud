@@ -52,6 +52,10 @@ public class ObjectSummaryDTO implements Serializable {
      * 全路径
      */
     private String url;
+    /**
+     * true 是文件，false 是文件夹
+     */
+    private Boolean file;
 
 
 }

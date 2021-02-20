@@ -1,5 +1,6 @@
 package quick.pager.pcloud.service.impl;
 
+import com.alibaba.cloud.spring.boot.oss.env.OssProperties;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.model.Bucket;
 import com.aliyun.oss.model.ListObjectsRequest;
@@ -29,9 +30,12 @@ public class AliyunOSSCloudServiceImpl implements OSSCloudService {
     @Value("${alibaba.cloud.bucket}")
     private String bucket;
 
+    private final OssProperties ossProperties;
+
     @Autowired(required = false)
-    public AliyunOSSCloudServiceImpl(OSS oss) {
+    public AliyunOSSCloudServiceImpl(OSS oss, OssProperties ossProperties) {
         this.oss = oss;
+        this.ossProperties = ossProperties;
     }
 
     @Override
@@ -61,31 +65,50 @@ public class AliyunOSSCloudServiceImpl implements OSSCloudService {
 
         ListObjectsRequest listObjectsReq = new ListObjectsRequest();
         listObjectsReq.setBucketName(request.getBucketName());
-        listObjectsReq.setDelimiter(request.getDelimiter());
+        listObjectsReq.setDelimiter("/");
         listObjectsReq.setPrefix(request.getPrefix());
         listObjectsReq.setMarker(request.getMarker());
         listObjectsReq.setMaxKeys(request.getMaxKey());
 
         ObjectListing objectListing = oss.listObjects(listObjectsReq);
 
-        List<OSSObjectSummary> summaries = Optional.ofNullable(objectListing)
-                .map(ObjectListing::getObjectSummaries).get();
+        Optional<ObjectListing> optional = Optional.ofNullable(objectListing);
 
+        List<ObjectSummaryDTO> summaryDTOS = Lists.newArrayList();
+        int total = 0;
 
-        List<ObjectSummaryDTO> dtos = summaries.stream().map(item ->
-                ObjectSummaryDTO.builder()
-                        .bucketName(item.getBucketName())
-                        .lastModified(item.getLastModified())
-                        .eTag(item.getETag())
-                        .key(item.getKey())
-                        .size(item.getSize())
-                        .storageClass(item.getStorageClass())
-                        .ownerName(Optional.ofNullable(item.getOwner()).map(Owner::getDisplayName).get())
-                        .url(oss.generatePresignedUrl(bucket, item.getKey(), new Date(System.currentTimeMillis() + 3600L * 1000 * 24 * 365 * 10)).toString())
-                        .build()
-        ).collect(Collectors.toList());
+        if (optional.isPresent()) {
+            List<OSSObjectSummary> summaries = optional.get().getObjectSummaries();
+            List<String> folders = optional.get().getCommonPrefixes();
+            total = optional.get().getMaxKeys();
 
+            summaryDTOS = folders.stream().map(item ->
+                    ObjectSummaryDTO.builder()
+                            .bucketName(item)
+                            .file(Boolean.FALSE)
+                            .key(item)
+                            .lastModified(new Date())
+                            .build()
+            ).collect(Collectors.toList());
 
-        return ResponseResult.toSuccess(dtos, objectListing.getMaxKeys());
+            List<ObjectSummaryDTO> dtos = summaries.stream().map(item ->
+                    ObjectSummaryDTO.builder()
+                            .bucketName(item.getBucketName())
+                            .lastModified(item.getLastModified())
+                            .eTag(item.getETag())
+                            .key(item.getKey())
+                            .size(item.getSize())
+                            .file(Boolean.TRUE)
+                            .storageClass(item.getStorageClass())
+                            .ownerName(Optional.ofNullable(item.getOwner()).map(Owner::getDisplayName).get())
+                            .url("https://".concat(bucket).concat(".").concat(ossProperties.getEndpoint()).concat("/").concat(item.getKey()))
+                            .build()
+            ).collect(Collectors.toList());
+
+            summaryDTOS.addAll(dtos);
+
+        }
+
+        return ResponseResult.toSuccess(summaryDTOS, total);
     }
 }

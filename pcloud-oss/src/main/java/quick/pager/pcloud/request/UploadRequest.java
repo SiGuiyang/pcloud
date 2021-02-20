@@ -18,10 +18,6 @@ public class UploadRequest implements Serializable {
      */
     private String marker;
     /**
-     * 用于在返回的列表结果中压缩公共前缀的分隔符
-     */
-    private String delimiter;
-    /**
      * 类型
      */
     private String ossType;

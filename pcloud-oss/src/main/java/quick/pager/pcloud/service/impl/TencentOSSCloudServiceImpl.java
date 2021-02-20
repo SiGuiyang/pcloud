@@ -7,6 +7,7 @@ import com.qcloud.cos.model.COSObjectSummary;
 import com.qcloud.cos.model.ListObjectsRequest;
 import com.qcloud.cos.model.ObjectListing;
 import com.qcloud.cos.model.Owner;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -60,31 +61,52 @@ public class TencentOSSCloudServiceImpl implements OSSCloudService {
 
         ListObjectsRequest listObjectsReq = new ListObjectsRequest();
         listObjectsReq.setBucketName(request.getBucketName());
-        listObjectsReq.setDelimiter(request.getDelimiter());
+        listObjectsReq.setDelimiter("/");
         listObjectsReq.setPrefix(request.getPrefix());
         listObjectsReq.setMarker(request.getMarker());
         listObjectsReq.setMaxKeys(request.getMaxKey());
 
         ObjectListing objectListing = cos.listObjects(listObjectsReq);
 
-        List<COSObjectSummary> summaries = Optional.ofNullable(objectListing)
-                .map(ObjectListing::getObjectSummaries).get();
+        Optional<ObjectListing> optional = Optional.ofNullable(objectListing);
 
+        List<ObjectSummaryDTO> summaryDTOS = Lists.newArrayList();
 
-        List<ObjectSummaryDTO> dtos = summaries.stream().map(item ->
-                ObjectSummaryDTO.builder()
-                        .bucketName(item.getBucketName())
-                        .lastModified(item.getLastModified())
-                        .eTag(item.getETag())
-                        .key(item.getKey())
-                        .size(item.getSize())
-                        .storageClass(item.getStorageClass())
-                        .ownerName(Optional.ofNullable(item.getOwner()).map(Owner::getDisplayName).get())
-                        .url("https://".concat(cosCloudProperties.getBucket()).concat(".cos.").concat(cosCloudProperties.getRegionName()).concat(".myqcloud.com/").concat(item.getKey()))
-                        .build()
-        ).collect(Collectors.toList());
+        int total = 0;
 
+        if (optional.isPresent()) {
+            List<COSObjectSummary> summaries = optional.get().getObjectSummaries();
+            List<String> folders = optional.get().getCommonPrefixes();
+            total = optional.get().getMaxKeys();
 
-        return ResponseResult.toSuccess(dtos, objectListing.getMaxKeys());
+            summaryDTOS = folders.stream().map(item ->
+                    ObjectSummaryDTO.builder()
+                            .bucketName(item)
+                            .file(Boolean.FALSE)
+                            .key(item)
+                            .lastModified(new Date())
+                            .build()
+            ).collect(Collectors.toList());
+
+            List<ObjectSummaryDTO> dtos = summaries.stream().map(item ->
+                    ObjectSummaryDTO.builder()
+                            .bucketName(item.getBucketName())
+                            .lastModified(item.getLastModified())
+                            .eTag(item.getETag())
+                            .key(item.getKey())
+                            .size(item.getSize())
+                            .file(Boolean.TRUE)
+                            .storageClass(item.getStorageClass())
+                            .ownerName(Optional.ofNullable(item.getOwner()).map(Owner::getDisplayName).get())
+                            .url("https://".concat(cosCloudProperties.getBucket()).concat(".cos.").concat(cosCloudProperties.getRegionName()).concat(".myqcloud.com/").concat(item.getKey()))
+                            .build()
+            ).collect(Collectors.toList());
+
+            summaryDTOS.addAll(dtos);
+
+        }
+
+        return ResponseResult.toSuccess(summaryDTOS, total);
+
     }
 }
