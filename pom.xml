@@ -67,6 +67,7 @@
         <module>pcloud-integration</module>
         <module>pcloud-job-admin</module>
         <module>pcloud-log</module>
+        <module>pcloud-open</module>
         <module>pcloud-oss</module>
     </modules>
 
