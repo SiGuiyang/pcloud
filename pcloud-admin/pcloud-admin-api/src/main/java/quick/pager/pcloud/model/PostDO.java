@@ -1,6 +1,5 @@
 package quick.pager.pcloud.model;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -11,6 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import quick.pager.pcloud.annotation.IdGen;
 
 /**
  * 岗位
@@ -29,7 +29,8 @@ public class PostDO implements Serializable {
     /**
      * 数据库主键
      */
-    @TableId(type = IdType.AUTO)
+    @TableId
+    @IdGen(value = "biz_post")
     private Long id;
     /**
      * 上级岗位主键

@@ -89,6 +89,12 @@
         </dependency>
 
         <dependency>
+            <groupId>quick.pager.pcloud</groupId>
+            <artifactId>pcloud-integration-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>easyexcel</artifactId>
         </dependency>

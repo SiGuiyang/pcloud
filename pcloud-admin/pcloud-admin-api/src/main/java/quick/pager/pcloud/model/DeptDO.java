@@ -1,6 +1,5 @@
 package quick.pager.pcloud.model;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -10,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import quick.pager.pcloud.annotation.IdGen;
 
 /**
  * 部门
@@ -27,7 +27,8 @@ public class DeptDO implements Serializable {
     /**
      * 数据库主键
      */
-    @TableId(type = IdType.AUTO)
+    @TableId
+    @IdGen(value = "biz_dept")
     private Long id;
     /**
      * 上级部门主键
