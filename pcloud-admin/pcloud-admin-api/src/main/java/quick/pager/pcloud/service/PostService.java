@@ -3,9 +3,9 @@ package quick.pager.pcloud.service;
 import java.util.List;
 import quick.pager.pcloud.dto.PostDTO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.PostOtherRequest;
-import quick.pager.pcloud.request.PostPageRequest;
-import quick.pager.pcloud.request.PostSaveRequest;
+import quick.pager.pcloud.model.request.PostOtherRequest;
+import quick.pager.pcloud.model.request.PostPageRequest;
+import quick.pager.pcloud.model.request.PostSaveRequest;
 
 /**
  * 岗位服务

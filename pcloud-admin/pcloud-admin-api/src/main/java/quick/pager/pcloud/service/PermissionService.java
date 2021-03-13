@@ -1,9 +1,7 @@
 package quick.pager.pcloud.service;
 
-import java.util.List;
-import quick.pager.pcloud.dto.MenuDTO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.AuthorizationRequest;
+import quick.pager.pcloud.model.request.AuthorizationRequest;
 
 /**
  * 权限服务

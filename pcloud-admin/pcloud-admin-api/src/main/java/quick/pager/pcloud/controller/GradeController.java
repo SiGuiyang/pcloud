@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.constants.ResponseStatus;
 import quick.pager.pcloud.dto.GradeDTO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.GradeOtherRequest;
-import quick.pager.pcloud.request.GradePageRequest;
-import quick.pager.pcloud.request.GradeSaveRequest;
+import quick.pager.pcloud.model.request.GradeOtherRequest;
+import quick.pager.pcloud.model.request.GradePageRequest;
+import quick.pager.pcloud.model.request.GradeSaveRequest;
 import quick.pager.pcloud.service.GradeService;
 import quick.pager.pcloud.utils.Assert;
 

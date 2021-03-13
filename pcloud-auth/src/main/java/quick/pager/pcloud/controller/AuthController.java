@@ -16,7 +16,7 @@ import quick.pager.pcloud.admin.dto.UserDTO;
 import quick.pager.pcloud.dto.OAuthTokenDTO;
 import quick.pager.pcloud.enums.GrantTypeEnums;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.LoginRequest;
+import quick.pager.pcloud.model.request.LoginRequest;
 import quick.pager.pcloud.service.JWTService;
 import quick.pager.pcloud.utils.Assert;
 

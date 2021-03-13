@@ -1,15 +1,11 @@
 package quick.pager.pcloud.service;
 
 import java.util.List;
-import quick.pager.pcloud.dto.PermissionDTO;
 import quick.pager.pcloud.dto.GradeDTO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.GradeOtherRequest;
-import quick.pager.pcloud.request.GradePageRequest;
-import quick.pager.pcloud.request.GradeSaveRequest;
-import quick.pager.pcloud.request.RoleOtherRequest;
-import quick.pager.pcloud.request.RolePageRequest;
-import quick.pager.pcloud.request.RoleSaveRequest;
+import quick.pager.pcloud.model.request.GradeOtherRequest;
+import quick.pager.pcloud.model.request.GradePageRequest;
+import quick.pager.pcloud.model.request.GradeSaveRequest;
 
 /**
  * 职级服务

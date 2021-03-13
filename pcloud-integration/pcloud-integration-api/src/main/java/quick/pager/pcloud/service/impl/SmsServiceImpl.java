@@ -14,9 +14,9 @@ import quick.pager.pcloud.dto.SmsDTO;
 import quick.pager.pcloud.mapper.SmsMapper;
 import quick.pager.pcloud.model.SmsDO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.SmsPageRequest;
+import quick.pager.pcloud.model.request.SmsPageRequest;
 import quick.pager.pcloud.integration.request.SmsRequest;
-import quick.pager.pcloud.request.SmsSaveRequest;
+import quick.pager.pcloud.model.request.SmsSaveRequest;
 import quick.pager.pcloud.service.SmsService;
 import quick.pager.pcloud.utils.Assert;
 

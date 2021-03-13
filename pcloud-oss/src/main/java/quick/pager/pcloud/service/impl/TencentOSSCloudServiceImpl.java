@@ -18,7 +18,7 @@ import quick.pager.pcloud.dto.ObjectSummaryDTO;
 import quick.pager.pcloud.enmus.OSSTypeEnum;
 import quick.pager.pcloud.model.response.ResponseResult;
 import quick.pager.pcloud.properties.COSCloudProperties;
-import quick.pager.pcloud.request.UploadRequest;
+import quick.pager.pcloud.model.request.UploadRequest;
 import quick.pager.pcloud.service.OSSCloudService;
 
 @Service

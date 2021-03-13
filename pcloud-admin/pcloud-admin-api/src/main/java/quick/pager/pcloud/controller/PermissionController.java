@@ -1,17 +1,13 @@
 package quick.pager.pcloud.controller;
 
-import java.util.List;
 import java.util.Objects;
 import javax.annotation.Resource;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.constants.ResponseStatus;
-import quick.pager.pcloud.dto.MenuDTO;
-import quick.pager.pcloud.request.AuthorizationRequest;
+import quick.pager.pcloud.model.request.AuthorizationRequest;
 import quick.pager.pcloud.model.response.ResponseResult;
 import quick.pager.pcloud.service.PermissionService;
 import quick.pager.pcloud.utils.Assert;

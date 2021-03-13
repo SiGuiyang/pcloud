@@ -15,8 +15,8 @@ import quick.pager.pcloud.dto.MailDTO;
 import quick.pager.pcloud.mapper.MailMapper;
 import quick.pager.pcloud.model.MailDO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.MailPageRequest;
-import quick.pager.pcloud.request.MailSaveRequest;
+import quick.pager.pcloud.model.request.MailPageRequest;
+import quick.pager.pcloud.model.request.MailSaveRequest;
 import quick.pager.pcloud.service.MailService;
 import quick.pager.pcloud.utils.Assert;
 

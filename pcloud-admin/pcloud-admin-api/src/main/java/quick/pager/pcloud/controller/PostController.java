@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.constants.ResponseStatus;
 import quick.pager.pcloud.dto.PostDTO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.PostOtherRequest;
-import quick.pager.pcloud.request.PostPageRequest;
-import quick.pager.pcloud.request.PostSaveRequest;
+import quick.pager.pcloud.model.request.PostOtherRequest;
+import quick.pager.pcloud.model.request.PostPageRequest;
+import quick.pager.pcloud.model.request.PostSaveRequest;
 import quick.pager.pcloud.service.PostService;
 import quick.pager.pcloud.utils.Assert;
 

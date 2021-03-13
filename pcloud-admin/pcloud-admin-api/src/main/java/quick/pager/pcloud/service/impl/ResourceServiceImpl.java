@@ -21,9 +21,9 @@ import quick.pager.pcloud.enums.ResourceBizTypeEnums;
 import quick.pager.pcloud.mapper.ResourceMapper;
 import quick.pager.pcloud.model.ResourceDO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.ResourceOtherRequest;
-import quick.pager.pcloud.request.ResourcePageRequest;
-import quick.pager.pcloud.request.ResourceSaveRequest;
+import quick.pager.pcloud.model.request.ResourceOtherRequest;
+import quick.pager.pcloud.model.request.ResourcePageRequest;
+import quick.pager.pcloud.model.request.ResourceSaveRequest;
 import quick.pager.pcloud.service.ResourceService;
 import quick.pager.pcloud.utils.Assert;
 

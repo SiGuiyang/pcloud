@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import quick.pager.pcloud.request.PageRequest;
+import quick.pager.pcloud.model.request.PageRequest;
 
 /**
  * 日志保存

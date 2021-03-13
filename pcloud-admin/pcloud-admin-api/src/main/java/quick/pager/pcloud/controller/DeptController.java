@@ -2,7 +2,6 @@ package quick.pager.pcloud.controller;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Resource;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,9 +15,9 @@ import quick.pager.pcloud.constants.IConsts;
 import quick.pager.pcloud.constants.ResponseStatus;
 import quick.pager.pcloud.dto.DeptDTO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.DeptOtherRequest;
-import quick.pager.pcloud.request.DeptPageRequest;
-import quick.pager.pcloud.request.DeptSaveRequest;
+import quick.pager.pcloud.model.request.DeptOtherRequest;
+import quick.pager.pcloud.model.request.DeptPageRequest;
+import quick.pager.pcloud.model.request.DeptSaveRequest;
 import quick.pager.pcloud.service.DeptService;
 import quick.pager.pcloud.utils.Assert;
 

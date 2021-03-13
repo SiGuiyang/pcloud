@@ -3,8 +3,8 @@ package quick.pager.pcloud.service;
 import java.util.List;
 import quick.pager.pcloud.dto.MailDTO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.request.MailPageRequest;
-import quick.pager.pcloud.request.MailSaveRequest;
+import quick.pager.pcloud.model.request.MailPageRequest;
+import quick.pager.pcloud.model.request.MailSaveRequest;
 
 /**
  * 站内信服务

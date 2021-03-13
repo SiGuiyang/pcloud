@@ -3,9 +3,9 @@ package quick.pager.pcloud.service;
 import java.util.List;
 import quick.pager.pcloud.dto.PermissionDTO;
 import quick.pager.pcloud.dto.RoleDTO;
-import quick.pager.pcloud.request.RoleOtherRequest;
-import quick.pager.pcloud.request.RolePageRequest;
-import quick.pager.pcloud.request.RoleSaveRequest;
+import quick.pager.pcloud.model.request.RoleOtherRequest;
+import quick.pager.pcloud.model.request.RolePageRequest;
+import quick.pager.pcloud.model.request.RoleSaveRequest;
 import quick.pager.pcloud.model.response.ResponseResult;
 
 /**
