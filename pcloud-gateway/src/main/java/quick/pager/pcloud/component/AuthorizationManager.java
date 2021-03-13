@@ -47,8 +47,16 @@ public class AuthorizationManager implements ReactiveAuthorizationManager<Author
 
         // 缓存取资源权限角色关系列表
         Map<Object, Object> resourceRolesMap = redisTemplate.opsForHash().entries(SConsts.AUTHORITY_PREFIX);
-        if (MapUtils.isEmpty(resourceRolesMap)) {
+
+        // 非管理后台请求过来，直接通过
+        if (!pathMatcher.match("/admin/**", path)
+                && !pathMatcher.match("/*/admin/**", path)) {
             return Mono.just(new AuthorizationDecision(true));
+        }
+
+        // 以下是管理后台请求过来，需要验证接口权限
+        if (MapUtils.isEmpty(resourceRolesMap)) {
+            return Mono.just(new AuthorizationDecision(false));
         }
 
         // 请求路径匹配到的资源需要的角色权限集合authorities统计

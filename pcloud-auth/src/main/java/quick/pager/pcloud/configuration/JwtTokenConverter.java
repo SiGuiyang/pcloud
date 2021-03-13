@@ -12,10 +12,14 @@ import quick.pager.pcloud.dto.OAuthUserDTO;
 
 /**
  * JWT 增强器
+ * 废弃类，已不使用
+ * 新版获取token方法
+ * {@link quick.pager.pcloud.controller.AuthController#login}
  *
  * @author siguiyang
  */
 @Component
+@Deprecated
 public class JwtTokenConverter extends JwtAccessTokenConverter {
 
 

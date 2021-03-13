@@ -16,11 +16,12 @@ public interface AdminAuthClient {
     /**
      * 获取系统用户
      *
-     * @param phone 手机号码
+     * @param phone    手机号码
+     * @param password 密码
      * @return 根据手机号码查询用户
      */
     @RequestMapping(value = "/permit/login", method = RequestMethod.POST)
-    ResponseResult<UserDTO> getSysUser(@RequestParam("phone") String phone);
+    ResponseResult<UserDTO> login(@RequestParam("phone") String phone, @RequestParam("password") String password);
 
     /**
      * 根据系统用户Id查询此用户所拥有的角色

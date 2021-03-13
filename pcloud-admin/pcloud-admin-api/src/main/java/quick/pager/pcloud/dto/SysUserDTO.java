@@ -62,6 +62,10 @@ public class SysUserDTO extends BasicDTO {
     private LocalDateTime gmtModifiedDate;
 
     private List<RoleDTO> roles = new ArrayList<>();
+    /**
+     * 角色编码
+     */
+    private List<String> authorities;
 
     private List<MenuDTO> routers = Lists.newArrayList();
 

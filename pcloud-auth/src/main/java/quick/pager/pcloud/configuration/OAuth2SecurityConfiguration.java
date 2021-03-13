@@ -5,7 +5,6 @@ import java.security.KeyPair;
 import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -18,7 +17,6 @@ import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
-import org.springframework.security.rsa.crypto.KeyStoreKeyFactory;
 import quick.pager.pcloud.service.OAuthUserService;
 
 /**
@@ -33,13 +31,16 @@ public class OAuth2SecurityConfiguration extends AuthorizationServerConfigurerAd
     private AuthenticationManager authenticationManager;
     private OAuthUserService oAuthUserService;
     private PasswordEncoder passwordEncoder;
+    private KeyPair keyPair;
 
     public OAuth2SecurityConfiguration(AuthenticationManager authenticationManager,
                                        OAuthUserService oAuthUserService,
-                                       PasswordEncoder passwordEncoder) {
+                                       PasswordEncoder passwordEncoder,
+                                       KeyPair keyPair) {
         this.authenticationManager = authenticationManager;
         this.oAuthUserService = oAuthUserService;
         this.passwordEncoder = passwordEncoder;
+        this.keyPair = keyPair;
     }
 
     @Override
@@ -84,14 +85,8 @@ public class OAuth2SecurityConfiguration extends AuthorizationServerConfigurerAd
     @Bean
     public JwtTokenConverter accessTokenConverter() {
         JwtTokenConverter jwtAccessTokenConverter = new JwtTokenConverter();
-        jwtAccessTokenConverter.setKeyPair(keyPair());
+        jwtAccessTokenConverter.setKeyPair(keyPair);
         return jwtAccessTokenConverter;
     }
 
-    @Bean
-    public KeyPair keyPair() {
-        //从classpath下的证书中获取秘钥对
-        KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(new ClassPathResource("pcloud.jks"), "pcloud".toCharArray());
-        return keyStoreKeyFactory.getKeyPair("pcloud", "pcloud".toCharArray());
-    }
 }

@@ -21,11 +21,15 @@ import quick.pager.pcloud.model.response.ResponseResult;
 
 /**
  * 查询用户权限
+ * 废弃类，已不使用
+ * 新版获取token方法
+ * {@link quick.pager.pcloud.controller.AuthController#login}
  *
  * @author siguiyang
  * @version 3.0
  */
 @Service
+@Deprecated
 public class OAuthUserService implements UserDetailsService {
 
     @Resource
@@ -34,7 +38,7 @@ public class OAuthUserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        ResponseResult<UserDTO> sysUserResponse = adminAuthClient.getSysUser(username);
+        ResponseResult<UserDTO> sysUserResponse = adminAuthClient.login(username, null);
         if (!sysUserResponse.check() || Objects.isNull(sysUserResponse.getData())) {
             throw new UsernameNotFoundException("用户不存在");
         }

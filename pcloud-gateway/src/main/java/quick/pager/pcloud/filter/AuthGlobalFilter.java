@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -44,8 +43,10 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
             JWSObject jwsObject = JWSObject.parse(realToken);
             String userStr = jwsObject.getPayload().toString();
             Map map = JSON.parseObject(userStr, Map.class);
-            Map user = (Map) map.get("user");
-            String phone = (String) user.get("phone");
+            // 解析用户登录信息
+            String phone = (String) map.get("phone");
+            String id = String.valueOf(map.get("id"));
+            String name = (String) map.get("name");
 
             // redis中不存在，则认为未登录，提示用户登录，登录过期提示
             Boolean hasKey = redisTemplate.hasKey("pcloud:token:".concat(phone));
@@ -54,17 +55,14 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
                 return WebUtils.refuse(exchange);
             }
 
-            // 用户信息写入消息头
-            if (MapUtils.isNotEmpty(user)) {
-                // 将手机号码放到消息头
-                ServerHttpRequest request = exchange.getRequest()
-                        .mutate()
-                        .header("id", String.valueOf(user.get("id")))
-                        .header("phone", phone)
-                        .header("name", (String) user.get("name"))
-                        .build();
-                return chain.filter(exchange.mutate().request(request).build());
-            }
+            // 将手机号码放到消息头
+            ServerHttpRequest request = exchange.getRequest()
+                    .mutate()
+                    .header("id", id)
+                    .header("phone", phone)
+                    .header("name", name)
+                    .build();
+            return chain.filter(exchange.mutate().request(request).build());
         } catch (ParseException e) {
             log.error("token 解析失败");
         }

@@ -9,7 +9,7 @@ import quick.pager.pcloud.model.response.ResponseResult;
 @Component
 public class AdminAuthClientFallback implements AdminAuthClient {
     @Override
-    public ResponseResult<UserDTO> getSysUser(String phone) {
+    public ResponseResult<UserDTO> login(String phone, String password) {
         return ResponseResult.toError("未找到用户");
     }
 

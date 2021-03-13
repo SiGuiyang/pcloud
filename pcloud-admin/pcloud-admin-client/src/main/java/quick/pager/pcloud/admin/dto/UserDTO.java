@@ -1,6 +1,7 @@
 package quick.pager.pcloud.admin.dto;
 
 import java.io.Serializable;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,6 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class UserDTO implements Serializable {
 
+    private static final long serialVersionUID = 5861943882572628472L;
     private Long id;
 
     /**
@@ -33,4 +35,8 @@ public class UserDTO implements Serializable {
      * 头像
      */
     private String avatar;
+    /**
+     * 角色编码
+     */
+    private List<String> authorities;
 }

@@ -46,7 +46,7 @@ public class SysUserController {
      *
      * @param phone 手机号码
      */
-    @PostMapping("/permit/login")
+//    @PostMapping("/permit/login")
     public ResponseResult<SysUserDTO> getSysUser(@RequestParam("phone") String phone) {
         return sysUserService.querySysUserByPhone(phone);
     }
