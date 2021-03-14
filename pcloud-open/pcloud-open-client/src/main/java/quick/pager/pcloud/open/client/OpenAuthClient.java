@@ -1,16 +1,14 @@
 package quick.pager.pcloud.open.client;
 
-import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import quick.pager.pcloud.open.dto.UserDTO;
-import quick.pager.pcloud.open.fallback.AdminAuthClientFallback;
+import quick.pager.pcloud.open.fallback.OpenAuthClientFallback;
 import quick.pager.pcloud.model.response.ResponseResult;
 
-@FeignClient(value = "pcloud-open-api", path = "/open", fallback = AdminAuthClientFallback.class)
+@FeignClient(value = "pcloud-open-api", path = "/open", fallback = OpenAuthClientFallback.class)
 public interface OpenAuthClient {
 
     /**
