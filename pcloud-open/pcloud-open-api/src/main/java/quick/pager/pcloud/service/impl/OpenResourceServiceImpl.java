@@ -227,7 +227,7 @@ public class OpenResourceServiceImpl implements OpenResourceService {
                     .collect(Collectors.toList());
 
             // 得到当前角色拥有的资源
-            opsForHash.put(SConsts.AUTHORITY_PREFIX, openAccountDO.getSecureId(), resourceDOS.stream()
+            opsForHash.put(SConsts.OPEN_AUTHORITY_PREFIX, openAccountDO.getSecureId(), resourceDOS.stream()
                     .filter(resourceDO -> resourceIds.contains(resourceDO.getId()))
                     .map(OpenResourceDO::getResourceUrl)
                     .distinct()

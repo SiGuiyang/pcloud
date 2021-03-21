@@ -9,8 +9,11 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Resource;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.redis.core.HashOperations;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import quick.pager.pcloud.constants.SConsts;
 import quick.pager.pcloud.dto.OpenAccountDTO;
 import quick.pager.pcloud.enums.OpenAccountStatusEnums;
 import quick.pager.pcloud.mapper.OpenAccountMapper;
@@ -27,6 +30,8 @@ public class OpenAccountServiceImpl implements OpenAccountService {
 
     @Resource
     private OpenAccountMapper openAccountMapper;
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;
 
 
     // region 数据转换
@@ -171,7 +176,16 @@ public class OpenAccountServiceImpl implements OpenAccountService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public ResponseResult<Long> delete(final Long id) {
+
+        OpenAccountDO openAccountDO = this.openAccountMapper.selectById(id);
+
+        Assert.isTrue(Objects.nonNull(openAccountDO), () -> "开放账户不存在");
         Assert.isTrue(this.openAccountMapper.deleteById(id) > 0, () -> "删除开放账户失败");
+
+        HashOperations<String, Object, Object> opsForHash = redisTemplate.opsForHash();
+
+        opsForHash.delete(SConsts.OPEN_AUTHORITY_PREFIX, openAccountDO.getSecureId());
+
         return ResponseResult.toSuccess(id);
     }
 }

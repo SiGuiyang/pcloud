@@ -264,6 +264,9 @@ public class RoleServiceImpl implements RoleService {
             Assert.isTrue(this.roleMenuMapper.delete(new LambdaQueryWrapper<RoleMenuDO>().eq(RoleMenuDO::getRoleId, id)) > 0,
                     () -> "删除角色菜单失败");
         }
+        // 删除角色，对应删除缓存
+        HashOperations<String, Object, Object> opsForHash = redisTemplate.opsForHash();
+        opsForHash.delete(SConsts.AUTHORITY_PREFIX, roleDO.getRoleCode());
         return ResponseResult.toSuccess(id);
     }
 
