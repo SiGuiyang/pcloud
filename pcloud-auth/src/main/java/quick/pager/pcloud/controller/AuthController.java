@@ -17,6 +17,9 @@ import quick.pager.pcloud.dto.OAuthTokenDTO;
 import quick.pager.pcloud.enums.GrantTypeEnums;
 import quick.pager.pcloud.model.response.ResponseResult;
 import quick.pager.pcloud.model.request.LoginRequest;
+import quick.pager.pcloud.open.client.OpenAuthClient;
+import quick.pager.pcloud.open.dto.OpenAccountDTO;
+import quick.pager.pcloud.open.request.OpenLoginRequest;
 import quick.pager.pcloud.service.JWTService;
 import quick.pager.pcloud.utils.Assert;
 
@@ -35,6 +38,8 @@ public class AuthController {
     private JWTService jwtService;
     @Resource
     private AdminAuthClient adminAuthClient;
+    @Resource
+    private OpenAuthClient openAuthClient;
 
     /**
      * 统一登录方法入口
@@ -71,10 +76,10 @@ public class AuthController {
      */
     private ResponseResult<OAuthTokenDTO> adminLogin(final LoginRequest request) {
 
-        ResponseResult<UserDTO> userDTOResponseResult = adminAuthClient.login(request.getPhone(), request.getPassword());
+        ResponseResult<UserDTO> result = adminAuthClient.login(request.getPhone(), request.getPassword());
 
-        if (userDTOResponseResult.check()) {
-            UserDTO userDTO = userDTOResponseResult.getData();
+        if (result.check()) {
+            UserDTO userDTO = result.getData();
 
             String token = jwtService.jwt(JSON.toJSONString(userDTO));
 
@@ -87,7 +92,7 @@ public class AuthController {
             return ResponseResult.toSuccess(tokenDTO);
         }
 
-        return ResponseResult.toError(userDTOResponseResult.getMsg());
+        return ResponseResult.toError(result.getMsg());
     }
 
     /**
@@ -96,7 +101,27 @@ public class AuthController {
      * @param request 请求参数
      */
     private ResponseResult<OAuthTokenDTO> openLogin(final LoginRequest request) {
-        return null;
+
+        OpenLoginRequest openLoginReq = new OpenLoginRequest();
+        openLoginReq.setSecureId(request.getSecureId());
+        openLoginReq.setSecureKey(request.getSecureKey());
+
+        ResponseResult<OpenAccountDTO> result = openAuthClient.login(openLoginReq);
+
+        if (result.check()) {
+            OpenAccountDTO openAccountDTO = result.getData();
+            String token = jwtService.jwt(JSON.toJSONString(openAccountDTO));
+
+            OAuthTokenDTO tokenDTO = OAuthTokenDTO.builder()
+                    .token(token)
+                    .expiresIn(60 * 60 * 24 * 10)
+                    .tokenHead("Bearer ").build();
+            redisTemplate.opsForValue().set("pcloud:open:token:" + request.getSecureId(), tokenDTO.getToken(), 2, TimeUnit.HOURS);
+
+            return ResponseResult.toSuccess(tokenDTO);
+        }
+
+        return ResponseResult.toError(result.getMsg());
     }
 
     /**

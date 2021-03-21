@@ -287,16 +287,6 @@ public class SysUserServiceImpl implements SysUserService {
         return ResponseResult.toSuccess(permissions);
     }
 
-    @Override
-    public ResponseResult<SysUserDTO> querySysUserByPhone(final String phone) {
-        LambdaQueryWrapper<SysUserDO> wrapper = new LambdaQueryWrapper<SysUserDO>()
-                .eq(SysUserDO::getPhone, phone);
-        SysUserDO sysUserDO = this.sysUserMapper.selectOne(wrapper);
-        Assert.isTrue(Objects.nonNull(sysUserDO), () -> "用户不存在");
-        return ResponseResult.toSuccess(this.convert(sysUserDO));
-
-    }
-
     // region 私有方法
 
     /**

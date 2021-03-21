@@ -68,6 +68,12 @@
 
         <dependency>
             <groupId>quick.pager.pcloud</groupId>
+            <artifactId>pcloud-open-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>quick.pager.pcloud</groupId>
             <artifactId>pcloud-common</artifactId>
             <version>${project.version}</version>
         </dependency>

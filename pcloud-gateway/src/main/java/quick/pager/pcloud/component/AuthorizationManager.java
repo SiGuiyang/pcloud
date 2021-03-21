@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Resource;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -45,14 +46,32 @@ public class AuthorizationManager implements ReactiveAuthorizationManager<Author
             return Mono.just(new AuthorizationDecision(false));
         }
 
-        // 缓存取资源权限角色关系列表
-        Map<Object, Object> resourceRolesMap = redisTemplate.opsForHash().entries(SConsts.AUTHORITY_PREFIX);
+        // 匹配开放平台
+        if (pathMatcher.match("/open/**", path)
+                && !pathMatcher.match("/open/admin/**", path)) {
+            // 缓存取资源权限应用关系列表
+            Map<Object, Object> openResourceMap = redisTemplate.opsForHash().entries(SConsts.OPEN_AUTHORITY_PREFIX);
+            List<String> authorities = new ArrayList<>();
+            openResourceMap.forEach((pattern, v) -> {
+                List<String> paths = JSON.parseArray(v.toString(), String.class);
+                for (String p : paths) {
+                    if (pathMatcher.match(p, path)) {
+                        authorities.add(path);
+                    }
+                }
+            });
+
+            return Mono.just(new AuthorizationDecision(CollectionUtils.isNotEmpty(authorities)));
+        }
 
         // 非管理后台请求过来，直接通过
         if (!pathMatcher.match("/admin/**", path)
                 && !pathMatcher.match("/*/admin/**", path)) {
             return Mono.just(new AuthorizationDecision(true));
         }
+
+        // 缓存取资源权限角色关系列表
+        Map<Object, Object> resourceRolesMap = redisTemplate.opsForHash().entries(SConsts.AUTHORITY_PREFIX);
 
         // 以下是管理后台请求过来，需要验证接口权限
         if (MapUtils.isEmpty(resourceRolesMap)) {

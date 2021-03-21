@@ -60,7 +60,11 @@ public interface SysUserService {
      */
     ResponseResult adminInfo(String phone);
 
+    /**
+     * 获取角色编码集
+     *
+     * @param sysUserId 用户主键
+     * @return 角色编码集
+     */
     ResponseResult<List<String>> getRolesBySysUserId(final Long sysUserId);
-
-    ResponseResult<SysUserDTO> querySysUserByPhone(final String phone);
 }

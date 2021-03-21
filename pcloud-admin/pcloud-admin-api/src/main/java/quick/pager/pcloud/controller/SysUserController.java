@@ -40,17 +40,6 @@ public class SysUserController {
     @Resource
     private SysUserService sysUserService;
 
-
-    /**
-     * 获取系统用户
-     *
-     * @param phone 手机号码
-     */
-//    @PostMapping("/permit/login")
-    public ResponseResult<SysUserDTO> getSysUser(@RequestParam("phone") String phone) {
-        return sysUserService.querySysUserByPhone(phone);
-    }
-
     /**
      * 登陆获取用户的角色编码
      *

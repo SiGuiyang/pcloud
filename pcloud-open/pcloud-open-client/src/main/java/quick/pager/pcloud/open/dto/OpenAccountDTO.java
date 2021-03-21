@@ -11,30 +11,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UserDTO implements Serializable {
+public class OpenAccountDTO implements Serializable {
 
-    private static final long serialVersionUID = 5861943882572628472L;
+    private static final long serialVersionUID = 6326803018780948407L;
     private Long id;
 
     /**
-     * 手机号码
+     * secureId
      */
-    private String phone;
+    private String secureId;
 
     /**
-     * 登陆用户名
+     * secureKey
      */
-    private String name;
-
-    /**
-     * 密码
-     */
-    private String password;
-
-    /**
-     * 头像
-     */
-    private String avatar;
+    private String secureKey;
     /**
      * 角色编码
      */

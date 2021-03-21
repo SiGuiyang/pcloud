@@ -16,6 +16,15 @@ public class LoginRequest implements Serializable {
      */
     private String phone;
     /**
+     * secureId
+     */
+    private String secureId;
+
+    /**
+     * secureKey
+     */
+    private String secureKey;
+    /**
      * 登录密码
      */
     private String password;

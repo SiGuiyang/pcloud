@@ -76,6 +76,10 @@ public interface SConsts {
      */
     String AUTHORITY_PREFIX = "ROLE_RESOURCE";
     /**
+     * 开放平台
+     */
+    String OPEN_AUTHORITY_PREFIX = "OPEN_RESOURCE";
+    /**
      * 授权名称
      */
     String AUTHORITY_CLAIM_NAME = "authorities";
