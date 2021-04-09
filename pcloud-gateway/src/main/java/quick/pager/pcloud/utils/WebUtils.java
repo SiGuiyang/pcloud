@@ -80,10 +80,10 @@ public class WebUtils {
     /**
      * 网关拒绝，返回Result
      */
-    public static Mono<Void> refuse(ServerWebExchange serverWebExchange) {
+    public static Mono<Void> refuse(final ServerWebExchange serverWebExchange, final String msg) {
         // 权限不够拦截
         serverWebExchange.getResponse().setStatusCode(HttpStatus.OK);
-        ResponseResult data = ResponseResult.toError(HttpStatus.UNAUTHORIZED.value(), "登录过期");
+        ResponseResult data = ResponseResult.toError(HttpStatus.UNAUTHORIZED.value(), msg);
         DataBuffer buffer = serverWebExchange.getResponse().bufferFactory().wrap(JSON.toJSONString(data).getBytes(StandardCharsets.UTF_8));
         ServerHttpResponse response = serverWebExchange.getResponse();
         response.setStatusCode(HttpStatus.OK);
@@ -92,4 +92,64 @@ public class WebUtils {
         return response.writeWith(Mono.just(buffer));
 
     }
+
+
+
+    /**
+     * 获取真实访问ip地址
+     *
+     * @param request 请求体
+     * @return ip地址
+     */
+    public static String getRemoteAddr(ServerHttpRequest request) {
+        String ip = request.getHeaders().getFirst("x-forwarded-for");
+        if (ip != null && !isValidAddress(ip)) {
+            ip = null;
+        }
+
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeaders().getFirst("Proxy-Client-IP");
+            if (ip != null && !isValidAddress(ip)) {
+                ip = null;
+            }
+        }
+
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeaders().getFirst("WL-Proxy-Client-IP");
+            if (ip != null && !isValidAddress(ip)) {
+                ip = null;
+            }
+        }
+
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+
+            ip = request.getRemoteAddress().getAddress().getHostAddress();
+            if (ip != null && !isValidAddress(ip)) {
+                ip = null;
+            }
+        }
+
+        return ip;
+    }
+
+    private static boolean isValidAddress(String ip) {
+        if (ip == null) {
+            return false;
+        }
+
+        for (int i = 0; i < ip.length(); ++i) {
+            char ch = ip.charAt(i);
+            if (ch >= '0' && ch <= '9') {
+            } else if (ch >= 'A' && ch <= 'F') {
+            } else if (ch >= 'a' && ch <= 'f') {
+            } else if (ch == '.' || ch == ':') {
+                //
+            } else {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 }

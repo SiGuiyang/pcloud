@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -77,10 +78,10 @@ public class OSSController {
      * @param ossType  上传云服务器类型
      * @param response 响应流
      */
-    @GetMapping("/download")
-    public void download(@RequestParam(required = false) String ossKey,
-                         @RequestParam(required = false) String fileName,
-                         @RequestParam(required = false) String ossType,
+    @GetMapping("/download/{ossKey}/{fileName}/{ossType}")
+    public void download(@PathVariable("ossKey") String ossKey,
+                         @PathVariable("fileName") String fileName,
+                         @PathVariable("ossType") String ossType,
                          HttpServletResponse response) throws Exception {
 
         //得到要下载的文件

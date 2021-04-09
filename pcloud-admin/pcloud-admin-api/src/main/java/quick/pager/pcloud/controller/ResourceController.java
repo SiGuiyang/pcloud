@@ -35,7 +35,7 @@ public class ResourceController {
     /**
      * 获取系统资源
      */
-    @PostMapping("resource/page")
+    @PostMapping("/resource/page")
     public ResponseResult<List<ResourceDTO>> page(@RequestBody ResourcePageRequest request) {
         return resourceService.queryPage(request);
     }
@@ -59,7 +59,7 @@ public class ResourceController {
     /**
      * 新增系统资源
      */
-    @PostMapping("resource/create")
+    @PostMapping("/resource/create")
     public ResponseResult<Long> create(@RequestBody ResourceSaveRequest request) {
         return resourceService.create(request);
     }
@@ -67,7 +67,7 @@ public class ResourceController {
     /**
      * 修改系统资源
      */
-    @PutMapping("resource/modify")
+    @PutMapping("/resource/modify")
     public ResponseResult<Long> modify(@RequestBody ResourceSaveRequest request) {
         Assert.isTrue(Objects.nonNull(request.getId()), () -> ResponseStatus.PARAMS_EXCEPTION);
         return resourceService.modify(request);
@@ -78,7 +78,7 @@ public class ResourceController {
      *
      * @param id 资源主键
      */
-    @DeleteMapping("resource/{id}/delete")
+    @DeleteMapping("/resource/{id}/delete")
     public ResponseResult<Long> delete(@PathVariable("id") Long id) {
         return resourceService.delete(id);
     }

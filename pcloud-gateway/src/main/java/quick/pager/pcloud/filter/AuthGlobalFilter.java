@@ -33,7 +33,8 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        String token = WebUtils.getHeader(exchange.getRequest(), HttpHeaders.AUTHORIZATION);
+        ServerHttpRequest httpRequest = exchange.getRequest();
+        String token = WebUtils.getHeader(httpRequest, HttpHeaders.AUTHORIZATION);
         if (StringUtils.isEmpty(token) || token.startsWith("Basic")) {
             return chain.filter(exchange);
         }
@@ -48,25 +49,34 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
             String id = String.valueOf(map.get("id"));
             String name = (String) map.get("name");
 
+            final String key = "pcloud:token:".concat(phone);
             // redis中不存在，则认为未登录，提示用户登录，登录过期提示
-            Boolean hasKey = redisTemplate.hasKey("pcloud:token:".concat(phone));
+            Boolean hasKey = redisTemplate.hasKey(key);
             if (Objects.nonNull(hasKey) && !hasKey) {
                 log.info("登录缓存token过期，提示用户重新登录 phone = {}", phone);
-                return WebUtils.refuse(exchange);
+                return WebUtils.refuse(exchange, "登录过期");
+            }
+
+            // 判断token与redis存储的是否是一致的
+            // 不一致说明第三方设备登录，那么之前登录的设备请求将会被强制踢下线
+            // 若有如下判断逻辑，则不支持多端登录状态
+            String redisToken = (String) redisTemplate.opsForValue().get(key);
+            if (!realToken.equals(redisToken)) {
+                log.info("token与redisToken不一致，phone = {}, token = {}, redisToken = {}", phone, realToken, redisToken);
+                return WebUtils.refuse(exchange, "您的账号已在其它设备登录，请重新登录");
             }
 
             // 将手机号码放到消息头
-            ServerHttpRequest request = exchange.getRequest()
-                    .mutate()
+            return chain.filter(exchange.mutate().request(exchange.getRequest().mutate()
                     .header("id", id)
                     .header("phone", phone)
                     .header("name", name)
-                    .build();
-            return chain.filter(exchange.mutate().request(request).build());
+                    .header("X-Real-IP", WebUtils.getRemoteAddr(httpRequest)).build())
+                    .build());
         } catch (ParseException e) {
             log.error("token 解析失败");
         }
-        return WebUtils.refuse(exchange);
+        return WebUtils.refuse(exchange, "登录过期");
     }
 
     @Override

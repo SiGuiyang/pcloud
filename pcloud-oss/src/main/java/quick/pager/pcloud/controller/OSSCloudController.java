@@ -5,6 +5,7 @@ import java.util.Optional;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.EnumUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,8 +36,8 @@ public class OSSCloudController {
      * @param ossType oss云服务类型
      * @return
      */
-    @GetMapping("/bucket")
-    public ResponseResult<List<BucketDTO>> bucket(@RequestParam("ossType") String ossType) {
+    @GetMapping("/bucket/{ossType}")
+    public ResponseResult<List<BucketDTO>> bucket(@PathVariable("ossType") String ossType) {
 
         OSSTypeEnum ossTypeEnum = EnumUtils.getEnum(OSSTypeEnum.class, ossType);
         Optional<OSSCloudService> optional = OSSContext.getBeans(OSSCloudService.class).stream().filter(item -> item.support(ossTypeEnum)).findFirst();

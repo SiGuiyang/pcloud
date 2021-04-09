@@ -55,9 +55,7 @@ public class LogRequestGlobalFilter implements GlobalFilter, Ordered {
             // get,delete 方法
             if (HttpMethod.GET.equals(request.getMethod())
                     || HttpMethod.DELETE.equals(request.getMethod())) {
-                this.doLog(request, JSON.toJSONString(request.getQueryParams()));
                 return chain.filter(exchange.mutate().request(request).build());
-
             } else {
                 return readBody(exchange, chain);
             }
