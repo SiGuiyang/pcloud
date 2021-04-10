@@ -1,34 +1,34 @@
-package quick.pager.pcloud.log.request;
+package quick.pager.pcloud.dto;
 
+import java.io.Serializable;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import quick.pager.pcloud.model.request.Request;
 
 /**
- * 日志保存
+ * 请求日志
  *
  * @author siguiyang
  */
-@EqualsAndHashCode(callSuper = false)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class LogSaveRequest extends Request {
-    private static final long serialVersionUID = -9181373825316199258L;
+public class LogDTO implements Serializable {
 
+    private static final long serialVersionUID = -5476468641692523207L;
     private String _id;
-    /**
-     * 访问人
-     */
-    private String name;
+
     /**
      * 访问人主键
      */
     private String userId;
+    /**
+     * 访问人
+     */
+    private String name;
     /**
      * 接口访问地址
      */
@@ -49,4 +49,12 @@ public class LogSaveRequest extends Request {
      * 浏览器
      */
     private String browser;
+    /**
+     * 更新操作人
+     */
+    private String gmtModifiedName;
+    /**
+     * 数据库记录发生更新的时间
+     */
+    private LocalDateTime gmtModifiedDate;
 }

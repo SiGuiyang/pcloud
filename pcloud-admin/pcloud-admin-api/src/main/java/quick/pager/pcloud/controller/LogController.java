@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.dto.LogViewDTO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.log.dto.LogDTO;
-import quick.pager.pcloud.log.request.LogPageRequest;
-import quick.pager.pcloud.log.request.LogSaveRequest;
+import quick.pager.pcloud.dto.LogDTO;
+import quick.pager.pcloud.model.request.LogPageRequest;
+import quick.pager.pcloud.model.request.LogSaveRequest;
 import quick.pager.pcloud.service.LogService;
 
 /**
@@ -19,7 +19,7 @@ import quick.pager.pcloud.service.LogService;
  * @author siguiyang
  */
 @RestController
-@RequestMapping("/log")
+@RequestMapping("/admin")
 public class LogController {
 
     @Resource
@@ -28,7 +28,7 @@ public class LogController {
     /**
      * 首页访问量
      */
-    @PostMapping("/admin/action/statistics")
+    @PostMapping("/log/action/statistics")
     public ResponseResult<LogViewDTO> statistics() {
         return logService.statistics();
     }
@@ -37,7 +37,7 @@ public class LogController {
      * 日志列表
      * 管理后台查询接口
      */
-    @PostMapping("/admin/action/page")
+    @PostMapping("/log/action/page")
     public ResponseResult<List<LogDTO>> page(@RequestBody LogPageRequest request) {
         return logService.queryPage(request);
     }
@@ -45,7 +45,7 @@ public class LogController {
     /**
      * 新增日志
      */
-    @PostMapping("/action/create")
+    @PostMapping("/log/action/create")
     public ResponseResult<String> create(@RequestBody LogSaveRequest request) {
         return logService.create(request);
     }

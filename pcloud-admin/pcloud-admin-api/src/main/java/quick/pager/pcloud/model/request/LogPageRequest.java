@@ -1,4 +1,4 @@
-package quick.pager.pcloud.log.request;
+package quick.pager.pcloud.model.request;
 
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;

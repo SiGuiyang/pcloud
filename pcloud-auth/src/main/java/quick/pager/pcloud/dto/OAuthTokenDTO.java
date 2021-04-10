@@ -16,6 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class OAuthTokenDTO implements Serializable {
+    private static final long serialVersionUID = 5684175915736572075L;
     /**
      * 访问令牌
      */

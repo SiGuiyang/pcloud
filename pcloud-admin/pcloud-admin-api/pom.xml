@@ -57,6 +57,14 @@
             <artifactId>spring-security-core</artifactId>
             <version>5.2.5.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        </dependency>
         <!-- end spring boot -->
 
         <!-- start database -->
@@ -79,12 +87,6 @@
         <dependency>
             <groupId>quick.pager.pcloud</groupId>
             <artifactId>pcloud-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>quick.pager.pcloud</groupId>
-            <artifactId>pcloud-log-client</artifactId>
             <version>${project.version}</version>
         </dependency>
 

@@ -24,11 +24,11 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import quick.pager.pcloud.dto.LogViewDTO;
-import quick.pager.pcloud.log.dto.LogDTO;
+import quick.pager.pcloud.dto.LogDTO;
 import quick.pager.pcloud.model.LogDO;
 import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.log.request.LogPageRequest;
-import quick.pager.pcloud.log.request.LogSaveRequest;
+import quick.pager.pcloud.model.request.LogPageRequest;
+import quick.pager.pcloud.model.request.LogSaveRequest;
 import quick.pager.pcloud.service.LogService;
 import quick.pager.pcloud.utils.DateUtils;
 

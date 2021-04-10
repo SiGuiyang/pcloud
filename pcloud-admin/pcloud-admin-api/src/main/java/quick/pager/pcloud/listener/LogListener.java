@@ -11,7 +11,7 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
-import quick.pager.pcloud.log.request.LogSaveRequest;
+import quick.pager.pcloud.model.request.LogSaveRequest;
 import quick.pager.pcloud.mq.LogMQ;
 import quick.pager.pcloud.service.LogService;
 
