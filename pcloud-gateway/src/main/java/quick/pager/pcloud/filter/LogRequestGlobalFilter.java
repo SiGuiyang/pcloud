@@ -49,32 +49,44 @@ public class LogRequestGlobalFilter implements GlobalFilter, Ordered {
 
         String path = request.getPath().pathWithinApplication().value();
 
-        // 后台打印日志
-        if (pathMatcher.match("/admin/**", path)
-                || pathMatcher.match("/*/admin/**", path)) {
-            // get,delete 方法
-            if (HttpMethod.GET.equals(request.getMethod())
-                    || HttpMethod.DELETE.equals(request.getMethod())) {
-                return chain.filter(exchange.mutate().request(request).build());
-            } else {
-                return readBody(exchange, chain);
-            }
+        if (HttpMethod.GET.equals(request.getMethod())
+                || HttpMethod.DELETE.equals(request.getMethod())) {
+            this.doLog(request, JSON.toJSONString(request.getQueryParams()), path);
+            return chain.filter(exchange.mutate().request(request).build());
+        } else {
+            return readBody(exchange, chain, path);
         }
-        return chain.filter(exchange);
+    }
+
+    @Override
+    public int getOrder() {
+        return 1;
+    }
+
+
+    /**
+     * 是否是管理后台请求
+     *
+     * @param path 请求地址
+     * @return true 是 false 否
+     */
+    private boolean isAdminRequest(final String path) {
+        return pathMatcher.match("/admin/**", path)
+                || pathMatcher.match("/*/admin/**", path);
     }
 
     /**
      * readJsonBody
      */
-    private Mono<Void> readBody(ServerWebExchange exchange, GatewayFilterChain chain) {
+    private Mono<Void> readBody(ServerWebExchange exchange, GatewayFilterChain chain, String path) {
         final ServerHttpRequest request = exchange.getRequest();
         return DataBufferUtils.join(request.getBody())
                 .flatMap(dataBuffer -> {
-                    byte[] bytes = new byte[dataBuffer.readableByteCount()];
-                    dataBuffer.read(bytes);
+                    byte[] body = new byte[dataBuffer.readableByteCount()];
+                    dataBuffer.read(body);
                     DataBufferUtils.release(dataBuffer);
                     Flux<DataBuffer> cachedFlux = Flux.defer(() -> {
-                        DataBuffer buffer = exchange.getResponse().bufferFactory().wrap(bytes);
+                        DataBuffer buffer = exchange.getResponse().bufferFactory().wrap(body);
                         DataBufferUtils.retain(buffer);
                         return Mono.just(buffer);
                     });
@@ -89,14 +101,9 @@ public class LogRequestGlobalFilter implements GlobalFilter, Ordered {
                             exchange.mutate().request(mutatedRequest).build();
                     return ServerRequest.create(mutatedExchange, MESSAGE_READERS)
                             .bodyToMono(String.class)
-                            .doOnNext(objectValue -> doLog(request, objectValue))
+                            .doOnNext(objectValue -> doLog(request, objectValue, path))
                             .then(chain.filter(mutatedExchange));
                 });
-    }
-
-    @Override
-    public int getOrder() {
-        return 1;
     }
 
     /**
@@ -105,7 +112,9 @@ public class LogRequestGlobalFilter implements GlobalFilter, Ordered {
      * @param request 请求
      * @param params  请求参数
      */
-    private void doLog(ServerHttpRequest request, String params) {
+    private void doLog(ServerHttpRequest request, String params, String path) {
+        if (!isAdminRequest(path)) return;
+
         UserAgent userAgent = UserAgentUtil.parse(request.getHeaders().getFirst("User-Agent"));
         Map<String, Object> map = Maps.newHashMap();
         map.put("params", params);
