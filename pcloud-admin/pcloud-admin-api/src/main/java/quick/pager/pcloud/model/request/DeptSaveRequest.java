@@ -18,7 +18,7 @@ public class DeptSaveRequest extends Request {
     private Long parentId;
 
     /**
-     * 职级名称
+     * 部门名称
      */
     private String name;
     /**

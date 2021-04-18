@@ -2,6 +2,7 @@ package quick.pager.pcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import quick.pager.pcloud.config.LogMQ;
 
@@ -11,6 +12,7 @@ import quick.pager.pcloud.config.LogMQ;
  * @author siguiyang
  */
 @SpringCloudApplication
+@EnableFeignClients
 @EnableBinding(LogMQ.class)
 public class Gateway {
 

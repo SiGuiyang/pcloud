@@ -1,6 +1,5 @@
 package quick.pager.pcloud.component;
 
-import com.alibaba.fastjson.JSON;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -8,7 +7,6 @@ import javax.annotation.Resource;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.security.authorization.AuthorizationDecision;
@@ -18,7 +16,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.web.server.authorization.AuthorizationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.util.PathMatcher;
-import quick.pager.pcloud.constants.SConsts;
+import quick.pager.pcloud.admin.client.AdminRoleClient;
+import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.open.client.OpenAuthClient;
 import quick.pager.pcloud.utils.WebUtils;
 import reactor.core.publisher.Mono;
 
@@ -29,9 +29,10 @@ import reactor.core.publisher.Mono;
  */
 @Component
 public class AuthorizationManager implements ReactiveAuthorizationManager<AuthorizationContext> {
-
     @Resource
-    private RedisTemplate<String, Object> redisTemplate;
+    private AdminRoleClient adminRoleClient;
+    @Resource
+    private OpenAuthClient openAuthClient;
     @Resource
     private PathMatcher pathMatcher;
 
@@ -50,16 +51,9 @@ public class AuthorizationManager implements ReactiveAuthorizationManager<Author
         if (pathMatcher.match("/open/**", path)
                 && !pathMatcher.match("/open/admin/**", path)) {
             // 缓存取资源权限应用关系列表
-            Map<Object, Object> openResourceMap = redisTemplate.opsForHash().entries(SConsts.OPEN_AUTHORITY_PREFIX);
-            List<String> authorities = new ArrayList<>();
-            openResourceMap.forEach((pattern, v) -> {
-                List<String> paths = JSON.parseArray(v.toString(), String.class);
-                for (String p : paths) {
-                    if (pathMatcher.match(p, path)) {
-                        authorities.add(path);
-                    }
-                }
-            });
+            ResponseResult<Map<String, List<String>>> permissions = openAuthClient.permissions();
+            Map<String, List<String>> openResourceMap = permissions.getData();
+            List<String> authorities = this.getAuth(openResourceMap, path);
 
             return Mono.just(new AuthorizationDecision(CollectionUtils.isNotEmpty(authorities)));
         }
@@ -69,9 +63,8 @@ public class AuthorizationManager implements ReactiveAuthorizationManager<Author
                 && !pathMatcher.match("/*/admin/**", path)) {
             return Mono.just(new AuthorizationDecision(true));
         }
-
-        // 缓存取资源权限角色关系列表
-        Map<Object, Object> resourceRolesMap = redisTemplate.opsForHash().entries(SConsts.AUTHORITY_PREFIX);
+        ResponseResult<Map<String, List<String>>> result = adminRoleClient.permission();
+        Map<String, List<String>> resourceRolesMap = result.getData();
 
         // 以下是管理后台请求过来，需要验证接口权限
         if (MapUtils.isEmpty(resourceRolesMap)) {
@@ -79,16 +72,7 @@ public class AuthorizationManager implements ReactiveAuthorizationManager<Author
         }
 
         // 请求路径匹配到的资源需要的角色权限集合authorities统计
-        List<String> authorities = new ArrayList<>();
-        resourceRolesMap.forEach((pattern, v) -> {
-            List<String> paths = JSON.parseArray(v.toString(), String.class);
-            for (String p : paths) {
-                if (pathMatcher.match(p, path)) {
-                    authorities.add((String) pattern);
-                }
-            }
-
-        });
+        List<String> authorities = this.getAuth(resourceRolesMap, path);
 
         return mono
                 .filter(Authentication::isAuthenticated)
@@ -97,5 +81,23 @@ public class AuthorizationManager implements ReactiveAuthorizationManager<Author
                 .any(authorities::contains)
                 .map(AuthorizationDecision::new)
                 .defaultIfEmpty(new AuthorizationDecision(false));
+    }
+
+    /**
+     * 匹配权限
+     *
+     * @param resourceMap 权限资源
+     * @param path        访问接口
+     */
+    private List<String> getAuth(final Map<String, List<String>> resourceMap, final String path) {
+        List<String> authorities = new ArrayList<>();
+        resourceMap.forEach((pattern, v) -> {
+            for (String p : v) {
+                if (pathMatcher.match(p, path)) {
+                    authorities.add(pattern);
+                }
+            }
+        });
+        return authorities;
     }
 }

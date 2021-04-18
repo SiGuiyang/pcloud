@@ -1,6 +1,7 @@
 package quick.pager.pcloud.controller;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -77,6 +78,14 @@ public class RoleController {
     }
 
     /**
+     * 更新角色全量
+     */
+    @GetMapping("/role/permission")
+    public ResponseResult<Map<String, List<String>>> permission() {
+        return roleService.permission();
+    }
+
+    /**
      * 删除角色
      *
      * @param id 角色主键
@@ -89,7 +98,7 @@ public class RoleController {
     /**
      * 查看某个系统角色的权限列表
      */
-    @PostMapping("/role/{roleId}/menu")
+    @GetMapping("/role/{roleId}/menu")
     public ResponseResult<PermissionDTO> rolePermission(@PathVariable("roleId") Long roleId) {
         return roleService.rolePermission(roleId);
     }

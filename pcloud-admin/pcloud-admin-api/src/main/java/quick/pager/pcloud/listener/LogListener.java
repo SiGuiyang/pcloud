@@ -3,7 +3,6 @@ package quick.pager.pcloud.listener;
 import com.alibaba.fastjson.JSON;
 import com.rabbitmq.client.Channel;
 import java.io.IOException;
-import java.time.LocalDateTime;
 import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.support.AmqpHeaders;
@@ -31,7 +30,7 @@ public class LogListener {
     public void process(@Payload String msg,
                         @Header(AmqpHeaders.CHANNEL) Channel channel,
                         @Header(AmqpHeaders.DELIVERY_TAG) Long deliveryTag) throws IOException {
-        log.info("消费请求日志【{}】【{}】", LocalDateTime.now(), msg);
+        log.info("消费请求日志 msg = {}", msg);
         LogSaveRequest logSaveReq = JSON.parseObject(msg, LogSaveRequest.class);
 
         logService.create(logSaveReq);

@@ -1,13 +1,13 @@
 package quick.pager.pcloud.dto;
 
 import com.google.common.collect.Lists;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
@@ -16,12 +16,11 @@ import lombok.NoArgsConstructor;
  * @author siguiyang
  * @version 3.0
  */
-@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SysUserDTO extends BasicDTO {
+public class SysUserDTO implements Serializable {
 
     private static final long serialVersionUID = 6313168677365244170L;
     /**

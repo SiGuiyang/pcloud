@@ -5,6 +5,7 @@ import java.util.Objects;
 import javax.annotation.Resource;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -60,7 +61,7 @@ public class DeptController {
     /**
      * 获取部门
      */
-    @PostMapping("/dept/org")
+    @GetMapping("/dept/org")
     public ResponseResult<DeptDTO> org() {
         List<DeptDTO> deptDTOS = deptService.queryTree();
         return CollectionUtils.isNotEmpty(deptDTOS) ? ResponseResult.toSuccess(deptDTOS.get(IConsts.ZERO)) : ResponseResult.toSuccess();

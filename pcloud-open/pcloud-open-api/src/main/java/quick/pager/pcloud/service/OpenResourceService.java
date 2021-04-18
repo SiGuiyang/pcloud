@@ -1,6 +1,7 @@
 package quick.pager.pcloud.service;
 
 import java.util.List;
+import java.util.Map;
 import quick.pager.pcloud.dto.OpenPermissionDTO;
 import quick.pager.pcloud.dto.OpenResourceDTO;
 import quick.pager.pcloud.model.response.ResponseResult;
@@ -63,5 +64,7 @@ public interface OpenResourceService {
      * @param id 主键
      */
     ResponseResult<Long> delete(final Long id);
+
+    ResponseResult<Map<String,List<String>>> permissions();
 
 }

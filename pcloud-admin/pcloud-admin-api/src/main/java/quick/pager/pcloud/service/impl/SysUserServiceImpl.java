@@ -136,7 +136,6 @@ public class SysUserServiceImpl implements SysUserService {
      */
     private MenuDTO convert(final MenuDO menuDO) {
 
-
         MenuDTO menuDTO = MenuDTO.builder()
                 .id(menuDO.getId())
                 .component(menuDO.getComponent())
@@ -152,7 +151,6 @@ public class SysUserServiceImpl implements SysUserService {
                 .gmtModifiedName(menuDO.getGmtModifiedName())
                 .build();
 
-
         menuDTO.setMeta(new MenuDTO.Meta(menuDO.getName(), menuDO.getIcon(), false, null));
         if (IConsts.ZERO == LConsts.ZERO.compareTo(menuDO.getParentId())) {
             menuDTO.setComponent("Layout");
@@ -165,7 +163,15 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public ResponseResult<List<SysUserDTO>> queryPage(SysUserPageRequest request) {
 
+        List<Long> sysUserIds = Collections.emptyList();
+
+        if (CollectionUtils.isNotEmpty(request.getRoleIds())) {
+            List<SysRoleDO> sysRoleDOS = this.sysRoleMapper.selectBatchIds(request.getRoleIds());
+            sysUserIds = sysRoleDOS.stream().map(SysRoleDO::getSysUserId).distinct().collect(Collectors.toList());
+        }
+
         LambdaQueryWrapper<SysUserDO> wrapper = new LambdaQueryWrapper<SysUserDO>()
+                .in(CollectionUtils.isNotEmpty(sysUserIds), SysUserDO::getId, sysUserIds)
                 .eq(StringUtils.isNotEmpty(request.getPhone()), SysUserDO::getPhone, request.getPhone())
                 .like(StringUtils.isNotEmpty(request.getKeyword()), SysUserDO::getName, request.getKeyword());
         wrapper.orderByDesc(SysUserDO::getGmtCreatedDate);

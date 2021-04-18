@@ -1,6 +1,7 @@
 package quick.pager.pcloud.service;
 
 import java.util.List;
+import java.util.Map;
 import quick.pager.pcloud.dto.PermissionDTO;
 import quick.pager.pcloud.dto.RoleDTO;
 import quick.pager.pcloud.model.request.RoleOtherRequest;
@@ -40,6 +41,11 @@ public interface RoleService {
      * 更新全量角色缓存
      */
     ResponseResult<String> refresh();
+
+    /**
+     * 角色权限
+     */
+    ResponseResult<Map<String, List<String>>> permission();
 
     /**
      * 删除

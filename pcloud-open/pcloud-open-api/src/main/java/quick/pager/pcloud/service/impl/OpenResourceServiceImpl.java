@@ -3,14 +3,16 @@ package quick.pager.pcloud.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.google.common.collect.Maps;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -107,12 +109,6 @@ public class OpenResourceServiceImpl implements OpenResourceService {
                 .permission(resourceIds.contains(resourceDO.getId()))
                 .build();
     }
-
-    @PostConstruct
-    public void init() {
-        this.refresh(null);
-    }
-
 
     // endregion
 
@@ -234,6 +230,42 @@ public class OpenResourceServiceImpl implements OpenResourceService {
                     .collect(Collectors.toList()));
         });
         return ResponseResult.toSuccess();
+    }
+
+    @Override
+    public ResponseResult<Map<String, List<String>>> permissions() {
+
+        Map<String, List<String>> result = Maps.newConcurrentMap();
+        HashOperations<String, Object, Object> opsForHash = redisTemplate.opsForHash();
+        Map<Object, Object> map = opsForHash.entries(SConsts.OPEN_AUTHORITY_PREFIX);
+
+        if (MapUtils.isNotEmpty(map)) {
+            map.forEach((k, v) -> result.putIfAbsent((String) k, (List<String>) v));
+            return ResponseResult.toSuccess(result);
+        }
+
+        // 查询所有账户资源
+        List<OpenAccountDO> openAccountDOS = this.openAccountMapper.selectList(Wrappers.emptyWrapper());
+        // 查询所有资源
+        List<OpenResourceDO> resourceDOS = this.openResourceMapper.selectList(Wrappers.emptyWrapper());
+
+        openAccountDOS.forEach(openAccountDO -> {
+            // 查询当前账户资源
+            List<OpenAccountResourceDO> openAccountResourceDOS = this.openAccountResourceMapper.selectList(new LambdaQueryWrapper<OpenAccountResourceDO>()
+                    .eq(OpenAccountResourceDO::getAccountId, openAccountDO.getId()));
+            List<Long> resourceIds = openAccountResourceDOS.stream()
+                    .map(OpenAccountResourceDO::getResourceId)
+                    .collect(Collectors.toList());
+
+            // 得到当前角色拥有的资源
+            result.putIfAbsent(openAccountDO.getSecureId(), resourceDOS.stream()
+                    .filter(resourceDO -> resourceIds.contains(resourceDO.getId()))
+                    .map(OpenResourceDO::getResourceUrl)
+                    .distinct()
+                    .collect(Collectors.toList()));
+        });
+
+        return ResponseResult.toSuccess(result);
     }
 
     @Override
