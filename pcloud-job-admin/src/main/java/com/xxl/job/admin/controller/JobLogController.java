@@ -18,6 +18,7 @@ import com.xxl.job.core.util.DateUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -68,8 +69,8 @@ public class JobLogController {
         return new ReturnT<>(data);
     }
 
-    @RequestMapping("/getJobsByGroup")
-    public Map<String, Object> getJobsByGroup(int jobGroup) {
+    @RequestMapping("/{jobGroup}/getJobsByGroup")
+    public Map<String, Object> getJobsByGroup(@PathVariable("jobGroup") Integer jobGroup) {
         // package result
         Map<String, Object> maps = new HashMap<>();
         maps.put("code", 200);
