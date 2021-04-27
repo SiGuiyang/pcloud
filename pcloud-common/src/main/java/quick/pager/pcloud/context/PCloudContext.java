@@ -3,11 +3,7 @@ package quick.pager.pcloud.context;
 import com.google.common.collect.Lists;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
-import org.springframework.lang.NonNull;
-import org.springframework.stereotype.Component;
 
 /**
  * spring 上下文
@@ -15,18 +11,19 @@ import org.springframework.stereotype.Component;
  * @author siguiyang
  * @version 1.0.0
  */
-@Component
-public class PCloudContext implements ApplicationContextAware {
+public class PCloudContext {
 
     /**
      * 静态成员Spring 容器上下文
      */
     private static ApplicationContext applicationContext;
 
-    @Override
-    public void setApplicationContext(@NonNull ApplicationContext applicationContext) throws BeansException {
-
+    public static void setApplicationContext(ApplicationContext applicationContext) {
         PCloudContext.applicationContext = applicationContext;
+    }
+
+    private static ApplicationContext getApplicationContext() {
+        return applicationContext;
     }
 
     /**
@@ -70,9 +67,5 @@ public class PCloudContext implements ApplicationContextAware {
      */
     public static <T> List<T> getBeans(Class<T> requiredType) {
         return Lists.newArrayList(getBeanOfType(requiredType).values());
-    }
-
-    private static ApplicationContext getApplicationContext() {
-        return applicationContext;
     }
 }

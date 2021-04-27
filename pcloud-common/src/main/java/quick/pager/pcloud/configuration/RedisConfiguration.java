@@ -2,6 +2,7 @@ package quick.pager.pcloud.configuration;
 
 import com.alibaba.fastjson.support.spring.GenericFastJsonRedisSerializer;
 import java.nio.charset.StandardCharsets;
+import org.redisson.api.RedissonClient;
 import org.redisson.spring.starter.RedissonAutoConfiguration;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -11,6 +12,7 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import quick.pager.pcloud.context.PCloudRedisDelayContext;
 
 /**
  * redis 配置
@@ -24,8 +26,8 @@ public class RedisConfiguration {
 
 
     @Bean("redisTemplate")
-    public RedisTemplate<String,Object> redisTemplate(RedisConnectionFactory factory) {
-        RedisTemplate<String,Object> redisTemplate = new RedisTemplate<>();
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
+        RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         RedisSerializer stringSerializer = new StringRedisSerializer(StandardCharsets.UTF_8);
         RedisSerializer genericFastJsonRedisSerializer = new GenericFastJsonRedisSerializer();
         redisTemplate.setKeySerializer(stringSerializer);
@@ -38,4 +40,11 @@ public class RedisConfiguration {
 
         return redisTemplate;
     }
+
+
+    @Bean
+    public PCloudRedisDelayContext pCloudRedisDelayContext(RedissonClient redissonClient) {
+        return new PCloudRedisDelayContext(redissonClient);
+    }
+
 }
