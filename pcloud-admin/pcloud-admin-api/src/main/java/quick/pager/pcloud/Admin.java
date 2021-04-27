@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.stream.annotation.EnableBinding;
+import quick.pager.pcloud.annotation.EnableXxlJobAutoConfiguration;
 import quick.pager.pcloud.mq.LogMQ;
 
 /**
@@ -11,6 +12,7 @@ import quick.pager.pcloud.mq.LogMQ;
  */
 @SpringCloudApplication
 @EnableFeignClients
+@EnableXxlJobAutoConfiguration
 @EnableBinding(LogMQ.class)
 public class Admin {
 

@@ -65,7 +65,8 @@
         <module>pcloud-dependencies</module>
         <module>pcloud-gateway</module>
         <module>pcloud-integration</module>
-        <module>pcloud-job-admin</module>
+        <module>pcloud-oms</module>
+        <module>pcloud-xxl-job</module>
         <module>pcloud-open</module>
         <module>pcloud-oss</module>
     </modules>

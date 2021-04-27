@@ -8,7 +8,7 @@
         <groupId>quick.pager.pcloud</groupId>
         <version>1.0</version>
     </parent>
-    <artifactId>pcloud-job-admin</artifactId>
+    <artifactId>pcloud-xxl-job</artifactId>
     <packaging>jar</packaging>
 
     <description>管理中心</description>

@@ -76,6 +76,12 @@
             <groupId>quick.pager.pcloud</groupId>
             <artifactId>pcloud-common</artifactId>
             <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.xuxueli</groupId>
+                    <artifactId>xxl-job-core</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
     </dependencies>
