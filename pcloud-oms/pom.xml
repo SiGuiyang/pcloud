@@ -16,7 +16,7 @@
     <artifactId>pcloud-oms</artifactId>
     <packaging>pom</packaging>
 
-    <description>第三方整合中心</description>
+    <description>订单中心</description>
 
     <build>
         <plugins>

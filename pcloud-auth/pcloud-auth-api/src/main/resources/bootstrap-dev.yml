@@ -1,6 +1,6 @@
 spring:
   application:
-    name: pcloud-auth
+    name: pcloud-auth-api
   cloud:
     nacos:
       config:

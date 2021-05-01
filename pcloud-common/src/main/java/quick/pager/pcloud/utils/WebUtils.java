@@ -16,13 +16,17 @@ public class WebUtils {
      *
      * @return 登录的手机号
      */
+    public static HttpServletRequest getRequest() {
+        return ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+    }
+
+    /**
+     * 获取当前人登录的手机号
+     *
+     * @return 登录的手机号
+     */
     public static String getPhone() {
-
-        ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-
-        HttpServletRequest request = servletRequestAttributes.getRequest();
-
-        return request.getHeader("phone");
+        return getRequest().getHeader("phone");
     }
 
 
@@ -32,9 +36,6 @@ public class WebUtils {
      * @return 登录人名称
      */
     public static String getName() {
-        ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-
-        HttpServletRequest request = servletRequestAttributes.getRequest();
-        return request.getHeader("name");
+        return getRequest().getHeader("name");
     }
 }

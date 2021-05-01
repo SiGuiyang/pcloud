@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.admin.client.AdminAuthClient;
 import quick.pager.pcloud.admin.dto.UserDTO;
+import quick.pager.pcloud.dto.OAuthProfileDTO;
 import quick.pager.pcloud.dto.OAuthTokenDTO;
 import quick.pager.pcloud.enums.GrantTypeEnums;
 import quick.pager.pcloud.response.ResponseResult;
@@ -86,7 +87,14 @@ public class AuthController {
             OAuthTokenDTO tokenDTO = OAuthTokenDTO.builder()
                     .token(token)
                     .expiresIn(60 * 60 * 24 * 10)
-                    .tokenHead("Bearer ").build();
+                    .tokenHead("Bearer ")
+                    .profile(OAuthProfileDTO.builder()
+                            .id(userDTO.getId())
+                            .avatar(userDTO.getAvatar())
+                            .phone(userDTO.getPhone())
+                            .username(userDTO.getName())
+                            .build())
+                    .build();
             redisTemplate.opsForValue().set("pcloud:token:" + request.getPhone(), tokenDTO.getToken(), 10, TimeUnit.DAYS);
 
             return ResponseResult.toSuccess(tokenDTO);

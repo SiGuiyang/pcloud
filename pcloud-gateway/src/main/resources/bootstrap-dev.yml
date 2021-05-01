@@ -11,9 +11,6 @@ spring:
           - data-id: pcloud-common.properties
             group: pcloud
             refresh: true
-          - data-id: pcloud-redis.properties
-            group: pcloud
-            refresh: true
           - data-id: pcloud-sentinel.properties
             group: pcloud
             refresh: true

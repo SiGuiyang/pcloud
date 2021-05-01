@@ -28,6 +28,7 @@
             <groupId>quick.pager.pcloud</groupId>
             <artifactId>pcloud-common</artifactId>
             <version>1.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

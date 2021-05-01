@@ -29,4 +29,9 @@ public class OAuthTokenDTO implements Serializable {
      * 有效时间（秒）
      */
     private int expiresIn;
+    /**
+     * 用户身份信息
+     */
+    private OAuthProfileDTO profile;
+
 }
