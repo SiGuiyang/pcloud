@@ -23,7 +23,7 @@ import quick.pager.pcloud.constants.ResponseStatus;
 import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.utils.FileUtil;
 import quick.pager.pcloud.configuration.OSSContext;
-import quick.pager.pcloud.enmus.OSSTypeEnum;
+import quick.pager.pcloud.enums.OSSTypeEnum;
 import quick.pager.pcloud.service.OSSService;
 
 /**

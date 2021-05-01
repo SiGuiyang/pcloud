@@ -3,7 +3,7 @@ package quick.pager.pcloud.service;
 import java.util.List;
 import quick.pager.pcloud.dto.BucketDTO;
 import quick.pager.pcloud.dto.ObjectSummaryDTO;
-import quick.pager.pcloud.enmus.OSSTypeEnum;
+import quick.pager.pcloud.enums.OSSTypeEnum;
 import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.request.UploadRequest;
 

@@ -1,7 +1,5 @@
-package quick.pager.pcloud.enmus;
+package quick.pager.pcloud.enums;
 
-
-import quick.pager.pcloud.enums.IEnum;
 
 /**
  * OOS 云类型枚举

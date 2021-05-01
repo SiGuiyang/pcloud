@@ -18,7 +18,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.stereotype.Service;
 import quick.pager.pcloud.utils.DateUtils;
 import quick.pager.pcloud.utils.FileUtil;
-import quick.pager.pcloud.enmus.OSSTypeEnum;
+import quick.pager.pcloud.enums.OSSTypeEnum;
 import quick.pager.pcloud.properties.QiniuProperties;
 import quick.pager.pcloud.service.OSSService;
 

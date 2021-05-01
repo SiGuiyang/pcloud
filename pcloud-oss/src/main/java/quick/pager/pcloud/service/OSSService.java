@@ -2,7 +2,7 @@ package quick.pager.pcloud.service;
 
 import java.io.File;
 import java.io.InputStream;
-import quick.pager.pcloud.enmus.OSSTypeEnum;
+import quick.pager.pcloud.enums.OSSTypeEnum;
 
 /**
  * 上传服务

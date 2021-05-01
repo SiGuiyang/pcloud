@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.InputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import quick.pager.pcloud.enmus.OSSTypeEnum;
+import quick.pager.pcloud.enums.OSSTypeEnum;
 import quick.pager.pcloud.properties.COSCloudProperties;
 import quick.pager.pcloud.service.OSSService;
 import quick.pager.pcloud.utils.Assert;

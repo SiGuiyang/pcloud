@@ -17,7 +17,7 @@ import quick.pager.pcloud.constants.IConsts;
 import quick.pager.pcloud.constants.SConsts;
 import quick.pager.pcloud.utils.DateUtils;
 import quick.pager.pcloud.utils.FileUtil;
-import quick.pager.pcloud.enmus.OSSTypeEnum;
+import quick.pager.pcloud.enums.OSSTypeEnum;
 import quick.pager.pcloud.service.OSSService;
 
 
