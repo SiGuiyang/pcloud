@@ -3,7 +3,6 @@ package quick.pager.pcloud.request;
 import java.util.List;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import quick.pager.pcloud.model.request.PageRequest;
 
 /**
  * 访问资源

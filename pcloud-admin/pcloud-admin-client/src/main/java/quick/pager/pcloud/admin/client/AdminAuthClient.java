@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import quick.pager.pcloud.admin.dto.UserDTO;
 import quick.pager.pcloud.admin.fallback.AdminAuthClientFallback;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 
 @FeignClient(value = "pcloud-admin-api", path = "/admin", fallback = AdminAuthClientFallback.class)
 public interface AdminAuthClient {

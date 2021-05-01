@@ -27,7 +27,7 @@ import quick.pager.pcloud.mapper.OpenResourceMapper;
 import quick.pager.pcloud.model.OpenAccountDO;
 import quick.pager.pcloud.model.OpenAccountResourceDO;
 import quick.pager.pcloud.model.OpenResourceDO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.request.OpenAccountResourceRequest;
 import quick.pager.pcloud.request.OpenPermissionPageRequest;
 import quick.pager.pcloud.request.OpenResourceOtherRequest;

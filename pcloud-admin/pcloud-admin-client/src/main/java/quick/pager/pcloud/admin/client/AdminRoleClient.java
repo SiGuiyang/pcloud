@@ -5,7 +5,7 @@ import java.util.Map;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import quick.pager.pcloud.admin.fallback.AdminRoleClientFallback;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 
 /**
  * 全角色权限

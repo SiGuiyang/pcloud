@@ -19,8 +19,8 @@ import quick.pager.pcloud.model.ResourceDO;
 import quick.pager.pcloud.model.RoleDO;
 import quick.pager.pcloud.model.RoleMenuDO;
 import quick.pager.pcloud.model.RoleResourceDO;
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.model.request.AuthorizationRequest;
+import quick.pager.pcloud.response.ResponseResult;
+import quick.pager.pcloud.request.AuthorizationRequest;
 import quick.pager.pcloud.service.PermissionService;
 import quick.pager.pcloud.utils.Assert;
 

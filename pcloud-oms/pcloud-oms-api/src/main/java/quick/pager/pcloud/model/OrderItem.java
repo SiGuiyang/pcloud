@@ -27,7 +27,7 @@ public class OrderItem implements Serializable {
      * 主键
      */
     @TableId
-    @IdGen("oms_order")
+    @IdGen("oms_order_item")
     private Long id;
     /**
      * 订单主表主键

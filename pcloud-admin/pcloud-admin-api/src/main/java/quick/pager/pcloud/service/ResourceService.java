@@ -2,10 +2,10 @@ package quick.pager.pcloud.service;
 
 import java.util.List;
 import quick.pager.pcloud.dto.ResourceDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.model.request.ResourceOtherRequest;
-import quick.pager.pcloud.model.request.ResourcePageRequest;
-import quick.pager.pcloud.model.request.ResourceSaveRequest;
+import quick.pager.pcloud.response.ResponseResult;
+import quick.pager.pcloud.request.ResourceOtherRequest;
+import quick.pager.pcloud.request.ResourcePageRequest;
+import quick.pager.pcloud.request.ResourceSaveRequest;
 
 /**
  * 资源服务

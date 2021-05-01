@@ -1,7 +1,7 @@
 package quick.pager.pcloud.service;
 
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.model.request.AuthorizationRequest;
+import quick.pager.pcloud.response.ResponseResult;
+import quick.pager.pcloud.request.AuthorizationRequest;
 
 /**
  * 权限服务

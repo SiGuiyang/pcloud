@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.dto.LogViewDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.dto.LogDTO;
-import quick.pager.pcloud.model.request.LogPageRequest;
-import quick.pager.pcloud.model.request.LogSaveRequest;
+import quick.pager.pcloud.request.LogPageRequest;
+import quick.pager.pcloud.request.LogSaveRequest;
 import quick.pager.pcloud.service.LogService;
 
 /**

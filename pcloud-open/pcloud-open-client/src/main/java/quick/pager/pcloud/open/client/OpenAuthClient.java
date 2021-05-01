@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import quick.pager.pcloud.open.dto.OpenAccountDTO;
 import quick.pager.pcloud.open.fallback.OpenAuthClientFallback;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.open.request.OpenLoginRequest;
 
 @FeignClient(value = "pcloud-open-api", path = "/open", fallback = OpenAuthClientFallback.class)

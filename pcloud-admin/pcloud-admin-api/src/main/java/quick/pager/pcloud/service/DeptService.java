@@ -2,10 +2,10 @@ package quick.pager.pcloud.service;
 
 import java.util.List;
 import quick.pager.pcloud.dto.DeptDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.model.request.DeptOtherRequest;
-import quick.pager.pcloud.model.request.DeptPageRequest;
-import quick.pager.pcloud.model.request.DeptSaveRequest;
+import quick.pager.pcloud.response.ResponseResult;
+import quick.pager.pcloud.request.DeptOtherRequest;
+import quick.pager.pcloud.request.DeptPageRequest;
+import quick.pager.pcloud.request.DeptSaveRequest;
 
 /**
  * 部门服务

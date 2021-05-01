@@ -2,8 +2,7 @@ package quick.pager.pcloud.service;
 
 import java.util.List;
 import quick.pager.pcloud.dto.OpenAccountDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.open.request.OpenLoginRequest;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.request.OpenAccountPageRequest;
 import quick.pager.pcloud.request.OpenAccountSaveRequest;
 

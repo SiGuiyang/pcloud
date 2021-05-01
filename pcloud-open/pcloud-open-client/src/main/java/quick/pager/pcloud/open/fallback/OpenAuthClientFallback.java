@@ -5,7 +5,7 @@ import java.util.Map;
 import org.springframework.stereotype.Component;
 import quick.pager.pcloud.open.client.OpenAuthClient;
 import quick.pager.pcloud.open.dto.OpenAccountDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.open.request.OpenLoginRequest;
 
 @Component

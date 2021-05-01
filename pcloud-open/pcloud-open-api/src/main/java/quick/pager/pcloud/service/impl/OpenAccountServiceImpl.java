@@ -18,7 +18,7 @@ import quick.pager.pcloud.dto.OpenAccountDTO;
 import quick.pager.pcloud.enums.OpenAccountStatusEnums;
 import quick.pager.pcloud.mapper.OpenAccountMapper;
 import quick.pager.pcloud.model.OpenAccountDO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.request.OpenAccountPageRequest;
 import quick.pager.pcloud.request.OpenAccountSaveRequest;
 import quick.pager.pcloud.service.OpenAccountService;

@@ -3,9 +3,9 @@ package quick.pager.pcloud.service;
 import java.util.List;
 import quick.pager.pcloud.dto.LogViewDTO;
 import quick.pager.pcloud.dto.LogDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.model.request.LogPageRequest;
-import quick.pager.pcloud.model.request.LogSaveRequest;
+import quick.pager.pcloud.response.ResponseResult;
+import quick.pager.pcloud.request.LogPageRequest;
+import quick.pager.pcloud.request.LogSaveRequest;
 
 /**
  * 请求日志服务

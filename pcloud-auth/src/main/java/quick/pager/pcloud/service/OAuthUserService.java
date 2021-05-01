@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import quick.pager.pcloud.admin.client.AdminAuthClient;
 import quick.pager.pcloud.admin.dto.UserDTO;
 import quick.pager.pcloud.dto.OAuthUserDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 
 /**
  * 查询用户权限

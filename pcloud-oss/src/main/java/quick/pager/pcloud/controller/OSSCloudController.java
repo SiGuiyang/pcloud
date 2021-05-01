@@ -9,15 +9,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.configuration.OSSContext;
 import quick.pager.pcloud.constants.ResponseStatus;
 import quick.pager.pcloud.dto.BucketDTO;
 import quick.pager.pcloud.dto.ObjectSummaryDTO;
 import quick.pager.pcloud.enmus.OSSTypeEnum;
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.model.request.UploadRequest;
+import quick.pager.pcloud.response.ResponseResult;
+import quick.pager.pcloud.request.UploadRequest;
 import quick.pager.pcloud.service.OSSCloudService;
 
 /**

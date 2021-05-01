@@ -4,7 +4,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 import quick.pager.pcloud.admin.client.AdminAuthClient;
 import quick.pager.pcloud.admin.dto.UserDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 
 @Component
 public class AdminAuthClientFallback implements AdminAuthClient {

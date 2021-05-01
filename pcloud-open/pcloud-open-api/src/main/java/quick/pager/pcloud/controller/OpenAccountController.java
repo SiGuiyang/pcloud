@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.constants.ResponseStatus;
 import quick.pager.pcloud.dto.OpenAccountDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.request.OpenAccountPageRequest;
 import quick.pager.pcloud.request.OpenAccountSaveRequest;
 import quick.pager.pcloud.service.OpenAccountService;

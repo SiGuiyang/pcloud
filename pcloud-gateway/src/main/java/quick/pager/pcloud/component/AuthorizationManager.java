@@ -17,7 +17,7 @@ import org.springframework.security.web.server.authorization.AuthorizationContex
 import org.springframework.stereotype.Component;
 import org.springframework.util.PathMatcher;
 import quick.pager.pcloud.admin.client.AdminRoleClient;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.open.client.OpenAuthClient;
 import quick.pager.pcloud.utils.WebUtils;
 import reactor.core.publisher.Mono;

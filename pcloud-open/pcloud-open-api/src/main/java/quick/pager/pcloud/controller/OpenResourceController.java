@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.constants.ResponseStatus;
 import quick.pager.pcloud.dto.OpenPermissionDTO;
 import quick.pager.pcloud.dto.OpenResourceDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.request.OpenAccountResourceRequest;
 import quick.pager.pcloud.request.OpenPermissionPageRequest;
 import quick.pager.pcloud.request.OpenResourceOtherRequest;

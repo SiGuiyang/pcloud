@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import quick.pager.pcloud.annotation.IdGen;
 import quick.pager.pcloud.integration.client.IntegrationIdGenClient;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.utils.Assert;
 
 /**

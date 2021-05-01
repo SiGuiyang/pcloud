@@ -2,9 +2,9 @@ package quick.pager.pcloud.service;
 
 import java.util.List;
 import quick.pager.pcloud.dto.MenuDTO;
-import quick.pager.pcloud.model.request.MenuOtherRequest;
-import quick.pager.pcloud.model.request.MenuSaveRequest;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.request.MenuOtherRequest;
+import quick.pager.pcloud.request.MenuSaveRequest;
+import quick.pager.pcloud.response.ResponseResult;
 
 /**
  * 菜单服务

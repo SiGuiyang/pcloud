@@ -26,9 +26,9 @@ import org.springframework.util.StringUtils;
 import quick.pager.pcloud.dto.LogViewDTO;
 import quick.pager.pcloud.dto.LogDTO;
 import quick.pager.pcloud.model.LogDO;
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.model.request.LogPageRequest;
-import quick.pager.pcloud.model.request.LogSaveRequest;
+import quick.pager.pcloud.response.ResponseResult;
+import quick.pager.pcloud.request.LogPageRequest;
+import quick.pager.pcloud.request.LogSaveRequest;
 import quick.pager.pcloud.service.LogService;
 import quick.pager.pcloud.utils.DateUtils;
 

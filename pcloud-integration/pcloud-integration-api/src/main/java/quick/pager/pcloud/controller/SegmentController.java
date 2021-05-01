@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.dto.LeafDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.model.request.IdGenPageRequest;
-import quick.pager.pcloud.model.request.IdGenSaveRequest;
+import quick.pager.pcloud.response.ResponseResult;
+import quick.pager.pcloud.request.IdGenPageRequest;
+import quick.pager.pcloud.request.IdGenSaveRequest;
 import quick.pager.pcloud.service.SegmentService;
 import quick.pager.pcloud.utils.Assert;
 

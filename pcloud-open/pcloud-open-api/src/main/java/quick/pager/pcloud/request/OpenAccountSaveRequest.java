@@ -2,7 +2,6 @@ package quick.pager.pcloud.request;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import quick.pager.pcloud.model.request.Request;
 
 /**
  * 开放账号

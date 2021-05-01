@@ -2,9 +2,9 @@ package quick.pager.pcloud.service;
 
 import java.util.List;
 import quick.pager.pcloud.dto.LeafDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.model.request.IdGenPageRequest;
-import quick.pager.pcloud.model.request.IdGenSaveRequest;
+import quick.pager.pcloud.response.ResponseResult;
+import quick.pager.pcloud.request.IdGenPageRequest;
+import quick.pager.pcloud.request.IdGenSaveRequest;
 
 /**
  * id生成¬号段管理服务

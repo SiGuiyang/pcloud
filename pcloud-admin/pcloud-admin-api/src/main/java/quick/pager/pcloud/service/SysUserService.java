@@ -3,10 +3,10 @@ package quick.pager.pcloud.service;
 import java.util.List;
 import quick.pager.pcloud.dto.SysUserDTO;
 import quick.pager.pcloud.dto.SysUserDownloadDTO;
-import quick.pager.pcloud.model.request.SysUserOtherRequest;
-import quick.pager.pcloud.model.request.SysUserPageRequest;
-import quick.pager.pcloud.model.request.SysUserSaveRequest;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.request.SysUserOtherRequest;
+import quick.pager.pcloud.request.SysUserPageRequest;
+import quick.pager.pcloud.request.SysUserSaveRequest;
+import quick.pager.pcloud.response.ResponseResult;
 
 /**
  * 系统用户服务

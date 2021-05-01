@@ -15,7 +15,7 @@ import quick.pager.pcloud.mapper.RoleMapper;
 import quick.pager.pcloud.mapper.SysRoleMapper;
 import quick.pager.pcloud.mapper.SysUserMapper;
 import quick.pager.pcloud.model.SysUserDO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.service.LoginService;
 import quick.pager.pcloud.utils.Assert;
 

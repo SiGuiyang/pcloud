@@ -4,10 +4,10 @@ import java.util.List;
 import java.util.Map;
 import quick.pager.pcloud.dto.PermissionDTO;
 import quick.pager.pcloud.dto.RoleDTO;
-import quick.pager.pcloud.model.request.RoleOtherRequest;
-import quick.pager.pcloud.model.request.RolePageRequest;
-import quick.pager.pcloud.model.request.RoleSaveRequest;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.request.RoleOtherRequest;
+import quick.pager.pcloud.request.RolePageRequest;
+import quick.pager.pcloud.request.RoleSaveRequest;
+import quick.pager.pcloud.response.ResponseResult;
 
 /**
  * 角色服务

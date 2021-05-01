@@ -1,7 +1,7 @@
 package quick.pager.pcloud.service;
 
 import quick.pager.pcloud.dto.SysUserDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 
 /**
  * 登录服务

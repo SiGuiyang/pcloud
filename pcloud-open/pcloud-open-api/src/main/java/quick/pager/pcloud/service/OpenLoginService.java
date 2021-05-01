@@ -1,6 +1,6 @@
 package quick.pager.pcloud.service;
 
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.open.dto.OpenAccountDTO;
 import quick.pager.pcloud.open.request.OpenLoginRequest;
 

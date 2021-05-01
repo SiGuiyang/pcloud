@@ -4,12 +4,10 @@ import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.open.dto.OpenAccountDTO;
 import quick.pager.pcloud.open.request.OpenLoginRequest;
-import quick.pager.pcloud.service.OpenAccountService;
 import quick.pager.pcloud.service.OpenLoginService;
 
 /**

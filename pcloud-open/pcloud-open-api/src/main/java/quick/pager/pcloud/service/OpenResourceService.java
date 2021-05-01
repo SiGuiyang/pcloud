@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import quick.pager.pcloud.dto.OpenPermissionDTO;
 import quick.pager.pcloud.dto.OpenResourceDTO;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.request.OpenAccountResourceRequest;
 import quick.pager.pcloud.request.OpenPermissionPageRequest;
 import quick.pager.pcloud.request.OpenResourceOtherRequest;

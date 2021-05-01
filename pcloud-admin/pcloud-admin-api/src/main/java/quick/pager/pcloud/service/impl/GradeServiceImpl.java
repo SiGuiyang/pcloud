@@ -13,10 +13,10 @@ import org.springframework.transaction.annotation.Transactional;
 import quick.pager.pcloud.dto.GradeDTO;
 import quick.pager.pcloud.mapper.GradeMapper;
 import quick.pager.pcloud.model.GradeDO;
-import quick.pager.pcloud.model.response.ResponseResult;
-import quick.pager.pcloud.model.request.GradeOtherRequest;
-import quick.pager.pcloud.model.request.GradePageRequest;
-import quick.pager.pcloud.model.request.GradeSaveRequest;
+import quick.pager.pcloud.response.ResponseResult;
+import quick.pager.pcloud.request.GradeOtherRequest;
+import quick.pager.pcloud.request.GradePageRequest;
+import quick.pager.pcloud.request.GradeSaveRequest;
 import quick.pager.pcloud.service.GradeService;
 import quick.pager.pcloud.utils.Assert;
 

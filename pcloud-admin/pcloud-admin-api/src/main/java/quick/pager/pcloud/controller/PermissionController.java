@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import quick.pager.pcloud.constants.ResponseStatus;
-import quick.pager.pcloud.model.request.AuthorizationRequest;
-import quick.pager.pcloud.model.response.ResponseResult;
+import quick.pager.pcloud.request.AuthorizationRequest;
+import quick.pager.pcloud.response.ResponseResult;
 import quick.pager.pcloud.service.PermissionService;
 import quick.pager.pcloud.utils.Assert;
 
