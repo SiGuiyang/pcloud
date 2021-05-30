@@ -50,7 +50,7 @@ public class ResponseResult<T> implements Serializable {
 
     public static <T> ResponseResult<List<T>> toSuccess(List<T> data, long total) {
         ResponseResult<List<T>> responseResult = new ResponseResult<>();
-        responseResult.setCode(ResponseStatus.Code.SUCCESS);
+        responseResult.setCode(ResponseStatus.SUCCESS);
         responseResult.setMsg(ResponseStatus.SUCCESS_MSG);
         responseResult.setTotal(total);
         responseResult.setData(data);
@@ -59,7 +59,7 @@ public class ResponseResult<T> implements Serializable {
 
     public static <T> ResponseResult<T> toSuccess(T data) {
         ResponseResult<T> responseResult = new ResponseResult<>();
-        responseResult.setCode(ResponseStatus.Code.SUCCESS);
+        responseResult.setCode(ResponseStatus.SUCCESS);
         responseResult.setMsg(ResponseStatus.SUCCESS_MSG);
         responseResult.setData(data);
         return responseResult;
@@ -67,7 +67,7 @@ public class ResponseResult<T> implements Serializable {
 
     public static <T> ResponseResult<T> toSuccess() {
         ResponseResult<T> responseResult = new ResponseResult<>();
-        responseResult.setCode(ResponseStatus.Code.SUCCESS);
+        responseResult.setCode(ResponseStatus.SUCCESS);
         responseResult.setMsg(ResponseStatus.SUCCESS_MSG);
         return responseResult;
     }
@@ -77,13 +77,13 @@ public class ResponseResult<T> implements Serializable {
     }
 
     public static <T> ResponseResult<T> toError(String msg) {
-        return toError(ResponseStatus.Code.EXCEPTION_CODE, msg);
+        return toError(ResponseStatus.EXCEPTION_CODE, msg);
     }
 
     /**
      * 验证code是否成功
      */
     public boolean check() {
-        return ResponseStatus.Code.SUCCESS == this.getCode();
+        return ResponseStatus.SUCCESS == this.getCode();
     }
 }

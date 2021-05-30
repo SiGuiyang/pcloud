@@ -4,7 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import quick.pager.pcloud.annotation.EnableXxlJobAutoConfiguration;
 
 /**
  * 开放平台
@@ -14,7 +13,6 @@ import quick.pager.pcloud.annotation.EnableXxlJobAutoConfiguration;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-@EnableXxlJobAutoConfiguration
 public class Open {
 
 

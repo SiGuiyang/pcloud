@@ -20,7 +20,7 @@ import quick.pager.pcloud.annotation.IdGen;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_menu")
+@TableName("sys_menu")
 public class MenuDO implements Serializable {
 
     private static final long serialVersionUID = -3246720425417855255L;

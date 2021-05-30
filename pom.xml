@@ -61,10 +61,13 @@
     <modules>
         <module>pcloud-admin</module>
         <module>pcloud-auth</module>
+        <module>pcloud-cms</module>
         <module>pcloud-common</module>
         <module>pcloud-dependencies</module>
         <module>pcloud-gateway</module>
         <module>pcloud-integration</module>
+        <module>pcloud-member</module>
+        <module>pcloud-msg</module>
         <module>pcloud-oms</module>
         <module>pcloud-xxl-job</module>
         <module>pcloud-open</module>

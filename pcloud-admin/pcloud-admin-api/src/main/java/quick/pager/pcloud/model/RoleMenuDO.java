@@ -20,7 +20,7 @@ import quick.pager.pcloud.annotation.IdGen;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_role_menu")
+@TableName("sys_role_menu")
 public class RoleMenuDO implements Serializable {
     private static final long serialVersionUID = 5296292799500727996L;
 

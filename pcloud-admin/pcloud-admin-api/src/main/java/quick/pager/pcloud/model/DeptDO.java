@@ -20,7 +20,7 @@ import quick.pager.pcloud.annotation.IdGen;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_dept")
+@TableName("sys_dept")
 public class DeptDO implements Serializable {
     private static final long serialVersionUID = 5195345983397277986L;
 

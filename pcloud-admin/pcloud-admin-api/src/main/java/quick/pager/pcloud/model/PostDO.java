@@ -22,7 +22,7 @@ import quick.pager.pcloud.annotation.IdGen;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_post")
+@TableName("sys_post")
 public class PostDO implements Serializable {
     private static final long serialVersionUID = -235775213935475594L;
 

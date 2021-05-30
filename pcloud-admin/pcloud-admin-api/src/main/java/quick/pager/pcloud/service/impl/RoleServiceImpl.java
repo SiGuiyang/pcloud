@@ -214,28 +214,7 @@ public class RoleServiceImpl implements RoleService {
         List<RoleDO> roleDOS = this.roleMapper.selectList(Wrappers.emptyWrapper());
         // 查询所有资源
         List<ResourceDO> resourceDOS = this.resourceMapper.selectList(Wrappers.emptyWrapper());
-        HashOperations<String, Object, Object> opsForHash = redisTemplate.opsForHash();
-        roleDOS.forEach(roleDO -> {
-            List<RoleResourceDO> roleMenuDOS = this.roleResourceMapper.selectList(new LambdaQueryWrapper<RoleResourceDO>()
-                    .eq(RoleResourceDO::getRoleId, roleDO.getId()));
-            List<Long> resourceIds = roleMenuDOS.stream().map(RoleResourceDO::getResourceId).collect(Collectors.toList());
-            // 得到当前角色拥有的资源
-            List<String> resourceUrls = resourceDOS.stream()
-                    .filter(resourceDO -> resourceIds.contains(resourceDO.getId()))
-                    .map(ResourceDO::getResourceUrl)
-                    .distinct()
-                    .collect(Collectors.toList());
-            opsForHash.put(SConsts.AUTHORITY_PREFIX, roleDO.getRoleCode(), resourceUrls);
-        });
-        List<String> resourceUrls = resourceDOS.stream()
-                .map(ResourceDO::getResourceUrl)
-                .distinct()
-                .collect(Collectors.toList());
-        // 超级管理员拥有所有访问权限
-        opsForHash.put(SConsts.AUTHORITY_PREFIX, "ROLE_SUPER_ADMIN", resourceUrls);
-
-        // 超级管理员拥有所有访问权限
-        opsForHash.put(SConsts.AUTHORITY_PREFIX, "ROLE_ADMIN", resourceUrls);
+        this.toPermMap(roleDOS, resourceDOS);
         return ResponseResult.toSuccess();
     }
 
@@ -257,30 +236,7 @@ public class RoleServiceImpl implements RoleService {
         // 查询所有资源
         List<ResourceDO> resourceDOS = this.resourceMapper.selectList(Wrappers.emptyWrapper());
 
-        roleDOS.forEach(roleDO -> {
-            List<RoleResourceDO> roleMenuDOS = this.roleResourceMapper.selectList(new LambdaQueryWrapper<RoleResourceDO>()
-                    .eq(RoleResourceDO::getRoleId, roleDO.getId()));
-            List<Long> resourceIds = roleMenuDOS.stream().map(RoleResourceDO::getResourceId).collect(Collectors.toList());
-            // 得到当前角色拥有的资源
-            List<String> resourceUrls = resourceDOS.stream()
-                    .filter(resourceDO -> resourceIds.contains(resourceDO.getId()))
-                    .map(ResourceDO::getResourceUrl)
-                    .distinct()
-                    .collect(Collectors.toList());
-            result.put(roleDO.getRoleCode(), resourceUrls);
-        });
-
-        List<String> resourceUrls = resourceDOS.stream()
-                .map(ResourceDO::getResourceUrl)
-                .distinct()
-                .collect(Collectors.toList());
-
-        result.put("ROLE_SUPER_ADMIN", resourceUrls);
-        result.put("ROLE_ADMIN", resourceUrls);
-        // 超级管理员拥有所有访问权限
-        opsForHash.putAll(SConsts.AUTHORITY_PREFIX, result);
-
-        return ResponseResult.toSuccess(result);
+        return ResponseResult.toSuccess(this.toPermMap(roleDOS, resourceDOS));
     }
 
     @Override
@@ -356,6 +312,39 @@ public class RoleServiceImpl implements RoleService {
     }
 
     // region 私有方法
+
+    /**
+     * 角色权限
+     *
+     * @param roleDOS     角色集
+     * @param resourceDOS 资源集
+     */
+    private Map<String, List<String>> toPermMap(final List<RoleDO> roleDOS, final List<ResourceDO> resourceDOS) {
+        Map<String, List<String>> result = Maps.newConcurrentMap();
+        HashOperations<String, Object, Object> opsForHash = redisTemplate.opsForHash();
+        roleDOS.forEach(roleDO -> {
+            List<RoleResourceDO> roleMenuDOS = this.roleResourceMapper.selectList(new LambdaQueryWrapper<RoleResourceDO>()
+                    .eq(RoleResourceDO::getRoleId, roleDO.getId()));
+            List<Long> resourceIds = roleMenuDOS.stream().map(RoleResourceDO::getResourceId).collect(Collectors.toList());
+            // 得到当前角色拥有的资源
+            List<String> resourceUrls = resourceDOS.stream()
+                    .filter(resourceDO -> resourceIds.contains(resourceDO.getId()))
+                    .map(ResourceDO::getResourceUrl)
+                    .distinct()
+                    .collect(Collectors.toList());
+            result.put(roleDO.getRoleCode(), resourceUrls);
+        });
+
+        List<String> resourceUrls = resourceDOS.stream()
+                .map(ResourceDO::getResourceUrl)
+                .distinct()
+                .collect(Collectors.toList());
+
+        result.put("ROLE_SUPER_ADMIN", resourceUrls);
+        result.put("ROLE_ADMIN", resourceUrls);
+        opsForHash.putAll(SConsts.AUTHORITY_PREFIX, result);
+        return result;
+    }
 
     /**
      * 树形结构转换

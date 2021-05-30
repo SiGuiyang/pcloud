@@ -25,14 +25,19 @@ public class PCloudExceptionAdvice {
         if (e instanceof PCloudException) {
             PCloudException exception = (PCloudException) e;
             message = exception.getMessage();
+            // PCloudException 特殊处理返回
+            return ResponseResult.toError(exception.getCode(), message);
         } else if (e instanceof HttpRequestMethodNotSupportedException) {
             message = "不支持GET/POST方法";
         } else if (e instanceof NoHandlerFoundException) {
             message = "请求接口不存在";
+        } else if (e instanceof IllegalArgumentException) {
+            IllegalArgumentException exception = (IllegalArgumentException) e;
+            message = exception.getMessage();
         } else {
             message = "系统异常";
         }
 
-        return ResponseResult.toError(ResponseStatus.Code.FAIL_CODE, message);
+        return ResponseResult.toError(ResponseStatus.FAIL_CODE, message);
     }
 }

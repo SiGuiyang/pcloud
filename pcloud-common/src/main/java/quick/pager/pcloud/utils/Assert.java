@@ -23,6 +23,18 @@ public class Assert {
         }
     }
 
+    /**
+     * 通用处理对外抛异常，用系统统一异常管理机制
+     *
+     * @param expression true 正常，false 异常，需要对外抛出异常
+     * @param message    异常消息
+     */
+    public static void isTrue(boolean expression, String message) {
+        if (!expression) {
+            throw new IllegalArgumentException(message);
+        }
+    }
+
     private static String nullSafeGet(Supplier<String> messageSupplier) {
         return (messageSupplier != null ? messageSupplier.get() : null);
     }

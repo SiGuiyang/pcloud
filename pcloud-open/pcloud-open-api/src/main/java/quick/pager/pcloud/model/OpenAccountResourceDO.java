@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_open_account_resource")
+@TableName("open_account_resource")
 public class OpenAccountResourceDO implements Serializable {
     private static final long serialVersionUID = -9005278896126297919L;
     /**

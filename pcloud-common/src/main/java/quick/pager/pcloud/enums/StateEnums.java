@@ -1,6 +1,7 @@
 package quick.pager.pcloud.enums;
 
 import lombok.AllArgsConstructor;
+import quick.pager.pcloud.exception.PCloudException;
 
 /**
  * 状态
@@ -26,5 +27,14 @@ public enum StateEnums implements IEnum<Integer> {
     @Override
     public String getDesc() {
         return this.desc;
+    }
+
+    public static StateEnums parse(final Integer code) {
+        for (StateEnums stateEnums : StateEnums.values()) {
+            if (stateEnums.code.equals(code)) {
+                return stateEnums;
+            }
+        }
+        throw new PCloudException("未找到相对应的枚举类型");
     }
 }

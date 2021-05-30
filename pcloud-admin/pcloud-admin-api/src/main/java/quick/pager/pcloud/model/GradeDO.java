@@ -20,7 +20,7 @@ import quick.pager.pcloud.annotation.IdGen;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_grade")
+@TableName("sys_grade")
 public class GradeDO implements Serializable {
     private static final long serialVersionUID = -4102614508859913902L;
     /**

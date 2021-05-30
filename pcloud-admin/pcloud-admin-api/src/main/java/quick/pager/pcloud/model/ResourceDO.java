@@ -20,7 +20,7 @@ import quick.pager.pcloud.annotation.IdGen;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_resource")
+@TableName("sys_resource")
 public class ResourceDO implements Serializable {
 
 

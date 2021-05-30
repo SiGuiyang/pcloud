@@ -20,7 +20,7 @@ import quick.pager.pcloud.annotation.IdGen;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_sys_user_profile")
+@TableName("sys_user_profile")
 public class SysUserProfileDO implements Serializable {
     private static final long serialVersionUID = -4973392327913133302L;
     /**

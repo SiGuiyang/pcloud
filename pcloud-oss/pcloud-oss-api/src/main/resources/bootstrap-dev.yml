@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: pcloud-oss-api
+  cloud:
+    nacos:
+      config:
+        server-addr: 106.54.251.32:8848
+        group: pcloud
+        namespace: 0759bc76-60b5-4f32-acd5-e5095cf2b93d
+        extension-configs:
+          - data-id: pcloud-common.properties
+            group: pcloud
+            refresh: true
+          - data-id: pcloud-sentinel.properties
+            group: pcloud
+            refresh: true
+      discovery:
+        server-addr: 106.54.251.32:8848
+        group: pcloud
+        namespace: 0759bc76-60b5-4f32-acd5-e5095cf2b93d
+        heart-beat-interval: 3
+        heart-beat-timeout: 6
+        ip-delete-timeout: 6
+        watch-delay: 5000

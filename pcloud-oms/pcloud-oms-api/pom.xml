@@ -92,7 +92,7 @@
 
         <dependency>
             <groupId>quick.pager.pcloud</groupId>
-            <artifactId>pcloud-admin-client</artifactId>
+            <artifactId>pcloud-oms-client</artifactId>
             <version>${project.version}</version>
         </dependency>
 

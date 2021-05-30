@@ -15,6 +15,9 @@ public class TestController {
     private OmsMq omsMq;
 
 
+    /**
+     * 延迟队列演示
+     */
     @GetMapping("/mq/send")
     public String send() {
 

@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_open_resource")
+@TableName("open_resource")
 public class OpenResourceDO implements Serializable {
 
     private static final long serialVersionUID = -3578239420307839503L;

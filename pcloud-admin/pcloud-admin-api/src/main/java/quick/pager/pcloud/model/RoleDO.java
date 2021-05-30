@@ -20,7 +20,7 @@ import quick.pager.pcloud.annotation.IdGen;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName("t_role")
+@TableName("sys_role")
 public class RoleDO implements Serializable {
 
     private static final long serialVersionUID = -7967826509330583583L;
