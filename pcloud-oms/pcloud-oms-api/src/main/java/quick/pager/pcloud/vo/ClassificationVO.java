@@ -17,4 +17,14 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ClassificationVO implements Serializable {
     private static final long serialVersionUID = 6268522494751242461L;
+
+    private Long id;
+    /**
+     * 分类名称
+     */
+    private String name;
+    /**
+     * 序号
+     */
+    private Integer sequence;
 }
