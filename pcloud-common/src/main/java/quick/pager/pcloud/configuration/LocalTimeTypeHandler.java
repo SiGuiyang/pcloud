@@ -11,10 +11,8 @@ import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedJdbcTypes;
 import org.apache.ibatis.type.MappedTypes;
-import org.springframework.stereotype.Component;
 import quick.pager.pcloud.utils.DateUtils;
 
-@Component
 //定义转换器支持的JAVA类型
 @MappedTypes(LocalTime.class)
 //定义转换器支持的数据库类型
