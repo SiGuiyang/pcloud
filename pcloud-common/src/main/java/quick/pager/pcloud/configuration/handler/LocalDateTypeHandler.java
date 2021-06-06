@@ -1,10 +1,11 @@
-package quick.pager.pcloud.configuration;
+package quick.pager.pcloud.configuration.handler;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalTime;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.type.BaseTypeHandler;
@@ -14,15 +15,15 @@ import org.apache.ibatis.type.MappedTypes;
 import quick.pager.pcloud.utils.DateUtils;
 
 //定义转换器支持的JAVA类型
-@MappedTypes(LocalTime.class)
+@MappedTypes(LocalDateTime.class)
 //定义转换器支持的数据库类型
 @MappedJdbcTypes(value = JdbcType.DATE, includeNullJdbcType = true)
-public class LocalTimeTypeHandler extends BaseTypeHandler<LocalTime> {
+public class LocalDateTypeHandler extends BaseTypeHandler<LocalDate> {
 
-    private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(DateUtils.NORM_TIME_PATTERN);
+    private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(DateUtils.NORM_DATE_PATTERN);
 
     @Override
-    public void setNonNullParameter(PreparedStatement ps, int i, LocalTime parameter, JdbcType jdbcType)
+    public void setNonNullParameter(PreparedStatement ps, int i, LocalDate parameter, JdbcType jdbcType)
             throws SQLException {
         if (parameter != null) {
             ps.setString(i, dateTimeFormatter.format(parameter));
@@ -30,30 +31,30 @@ public class LocalTimeTypeHandler extends BaseTypeHandler<LocalTime> {
     }
 
     @Override
-    public LocalTime getNullableResult(ResultSet rs, String columnName) throws SQLException {
+    public LocalDate getNullableResult(ResultSet rs, String columnName) throws SQLException {
         String target = rs.getString(columnName);
         if (StringUtils.isBlank(target)) {
             return null;
         }
-        return LocalTime.parse(target, dateTimeFormatter);
+        return LocalDate.parse(target, dateTimeFormatter);
     }
 
     @Override
-    public LocalTime getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
+    public LocalDate getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
         String target = rs.getString(columnIndex);
         if (StringUtils.isBlank(target)) {
             return null;
         }
-        return LocalTime.parse(target, dateTimeFormatter);
+        return LocalDate.parse(target, dateTimeFormatter);
     }
 
     @Override
-    public LocalTime getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
+    public LocalDate getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
         String target = cs.getString(columnIndex);
         if (StringUtils.isBlank(target)) {
             return null;
         }
-        return LocalTime.parse(target, dateTimeFormatter);
+        return LocalDate.parse(target, dateTimeFormatter);
     }
 
 }

@@ -1,4 +1,4 @@
-package quick.pager.pcloud.configuration;
+package quick.pager.pcloud.configuration.handler;
 
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
